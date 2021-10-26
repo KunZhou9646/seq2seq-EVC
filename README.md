@@ -11,7 +11,8 @@ The text encoder is 3-layer of 1D CNN with a kernel size of 5 and the channel of
 The codes are based on Non-parallel Speaker Voice Conversion: https://github.com/jxzhanggg/nonparaSeq2seqVC_code
 
 [1]  Y.  Wang,  R.  Skerry-Ryan,  D.  Stanton,  Y.  Wu,  R.  J.  Weiss, N. Jaitly, Z. Yang, Y. Xiao, Z. Chen, S. Bengioet al., “Tacotron:Towards  end-to-end  speech  synthesis,” Proc.  Interspeech  2017,pp. 4006–4010, 2017.
-
+## Database:
+We use ESD database, which is an emotional speech database that can be downloaded here: https://hltsingapore.github.io/ESD/. To run the codes, you first need to customize your data path correctly, and generate phoneme transcriptions with Festival. More details can be found in https://github.com/jxzhanggg/nonparaSeq2seqVC_code.
 ## To run the codes:
 
 **1. Installation**
@@ -28,7 +29,12 @@ $ python train.py -l logdir \
 -o outdir_emotion_IS --n_gpus=1 -c '/home/zhoukun/nonparaSeq2seqVC_code-master/pre-train/outdir/checkpoint_234000 (The path to your Pre-trained models from Stage I)' --warm_start
 ```
 **3. Run-time Inference**
-1. Generate emotion embedding from the emotion encoder:
+(1) Generate emotion embedding from the emotion encoder:
 ```Bash
 $ python inference_embedding.py -c '/home/zhoukun/nonparaSeq2seqVC_code-master/pre-train/outdir_emotion_update/checkpoint_3200' --hparams speaker_A='Neutral',speaker_B='Happy',speaker_C='Sad',speaker_D='Angry',speaker_E='Surprise',training_list='/home/zhoukun/nonparaSeq2seqVC_code-master/fine-tune/reader/emotion_list/testing_mel_list.txt',SC_kernel_size=1
 ```
+(2) Convert the source speech to the target emotion:
+```Bash
+$ python inference.py -c /home/zhoukun/nonparaSeq2seqVC_code-master/pre-train/outdir_emotion_update/checkpoint_3200 --num 20 --hparams validation_list='/home/zhoukun/nonparaSeq2seqVC_code-master/fine-tune/reader/emotion_list/evaluation_mel_list.txt',SC_kernel_size=1
+```
+Please customize inference.py to generate your intended emotion type.
