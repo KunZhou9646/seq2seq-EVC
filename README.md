@@ -1,4 +1,4 @@
-# seq2seq-EVC
+# seq2seq-EVC with Two-Stage Training
 This is the implementation of our Interspeech 2021 paper "Limited data emotional voice conversion leveraging text-to-speech: two-stage sequence-to-sequence training".https://arxiv.org/abs/2103.16809
 
 ## Implementation Details
