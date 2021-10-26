@@ -14,11 +14,15 @@ The codes are based on Non-parallel Speaker Voice Conversion: https://github.com
 
 ## To run the codes:
 
-**1. Stage I: Style Pre-training**
+**1. Installation**
+```Bash
+$ pip install -r requirements.txt
+```
+**2. Stage I: Style Pre-training**
 
 The pre-training procedure is same as the pretraining in  https://github.com/jxzhanggg/nonparaSeq2seqVC_code. You can download the pre-trained models from Stage I: Style Initialization here: https://drive.google.com/file/d/1oqk-PSREwpFNTyeREwcUry13WZ1LYl6U/view?usp=sharing. With the released pre-trained models, you can directly perform Stage II: Emotion Training.
 
-**2. Stage II: Emotion Training**
+**3. Stage II: Emotion Training**
 ```Bash
 $ python train.py -l logdir \
 -o outdir_emotion_IS --n_gpus=1 -c '/home/zhoukun/nonparaSeq2seqVC_code-master/pre-train/outdir/checkpoint_234000 (The path to your Pre-trained models from Stage I)' --warm_start
