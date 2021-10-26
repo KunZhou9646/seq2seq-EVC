@@ -12,6 +12,8 @@ The codes are based on Non-parallel Speaker Voice Conversion: https://github.com
 
 [1]  Y.  Wang,  R.  Skerry-Ryan,  D.  Stanton,  Y.  Wu,  R.  J.  Weiss, N. Jaitly, Z. Yang, Y. Xiao, Z. Chen, S. Bengioet al., “Tacotron:Towards  end-to-end  speech  synthesis,” Proc.  Interspeech  2017,pp. 4006–4010, 2017.
 
+## To run the codes:
+
 **Pre-trained Models from Stage I**
 
 The pre-training procedure is same as the pretraining in  https://github.com/jxzhanggg/nonparaSeq2seqVC_code. You can download the pre-trained models from Stage I: Style Initialization here: https://drive.google.com/file/d/1oqk-PSREwpFNTyeREwcUry13WZ1LYl6U/view?usp=sharing. With the released pre-trained models, you can directly perform Stage II: Emotion Training.
