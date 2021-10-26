@@ -22,6 +22,10 @@ $ pip install -r requirements.txt
 **2. Stage I: Style Pre-training**
 
 The pre-training procedure is same as the pretraining in  https://github.com/jxzhanggg/nonparaSeq2seqVC_code. You can download the pre-trained models from Stage I: Style Initialization here: https://drive.google.com/file/d/1oqk-PSREwpFNTyeREwcUry13WZ1LYl6U/view?usp=sharing. With the released pre-trained models, you can directly perform Stage II: Emotion Training.
+```Bash
+$ python train.py -l logdir \
+-o outdir --n_gpus=1 --hparams=speaker_adversial_loss_w=20.,ce_loss=False,speaker_classifier_loss_w=0.1,contrastive_loss_w=30.
+```
 
 **3. Stage II: Emotion Training**
 ```Bash
