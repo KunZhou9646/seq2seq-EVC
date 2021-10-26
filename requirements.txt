@@ -1,0 +1,9 @@
+torch==1.0.1
+tensorflow==1.14
+numpy
+typing
+tensorboardX
+matplotlib
+phonemizer
+librosa
+Pillow
