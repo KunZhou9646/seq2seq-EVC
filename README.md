@@ -42,7 +42,7 @@ $ python train.py -l logdir \
 You need to download ESD corpus and customize it accordingly, and then perform feature extraction:
 ```Bash
 $ cd reader
-$ python extract_features.py (please customize "path" and "kind", and edit the codes for "spec" or "mel-spec")
+$ python extract.py (please customize "path" and "kind", and edit the codes for "spec" or "mel-spec")
 $ python generate_list_mel.py
 ```
 
