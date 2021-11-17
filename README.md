@@ -21,13 +21,14 @@ $ pip install -r requirements.txt
 ```
 
 **2. Pre-processing for Stage I: Style Pre-training**
+
 You need to download VCTK corpus and customize it accordingly, and then perform feature extraction:
 ```Bash
 $ cd reader
 $ python extract_features.py (please customize "path" and "kind", and edit the codes for "spec" or "mel-spec")
 ```
 
-**2. Stage I: Style Pre-training**
+**3. Stage I: Style Pre-training**
 
 The pre-training procedure is same as the pretraining in  https://github.com/jxzhanggg/nonparaSeq2seqVC_code. You can download the pre-trained models from Stage I: Style Initialization here: https://drive.google.com/file/d/1oqk-PSREwpFNTyeREwcUry13WZ1LYl6U/view?usp=sharing. With the released pre-trained models, you can directly perform Stage II: Emotion Training. If you would like to pre-train it by yourself, you can try the following:
 ```Bash
@@ -35,12 +36,20 @@ $ python train.py -l logdir \
 -o outdir --n_gpus=1 --hparams=speaker_adversial_loss_w=20.,ce_loss=False,speaker_classifier_loss_w=0.1,contrastive_loss_w=30.
 ```
 
-**3. Stage II: Emotion Training**
+**4. Pre-processing for Stage II: Emotion Training**
+
+You need to download ESD corpus and customize it accordingly, and then perform feature extraction:
+```Bash
+$ cd reader
+$ python extract_features.py (please customize "path" and "kind", and edit the codes for "spec" or "mel-spec")
+```
+
+**5. Stage II: Emotion Training**
 ```Bash
 $ python train.py -l logdir \
 -o outdir_emotion_IS --n_gpus=1 -c '/home/zhoukun/nonparaSeq2seqVC_code-master/pre-train/outdir/checkpoint_234000 (The path to your Pre-trained models from Stage I)' --warm_start
 ```
-**3. Run-time Inference**
+**6. Run-time Inference**
 (1) Generate emotion embedding from the emotion encoder:
 ```Bash
 $ python inference_embedding.py -c '/home/zhoukun/nonparaSeq2seqVC_code-master/pre-train/outdir_emotion_update/checkpoint_3200' --hparams speaker_A='Neutral',speaker_B='Happy',speaker_C='Sad',speaker_D='Angry',speaker_E='Surprise',training_list='/home/zhoukun/nonparaSeq2seqVC_code-master/fine-tune/reader/emotion_list/testing_mel_list.txt',SC_kernel_size=1
