@@ -12,7 +12,7 @@ def extract_mel_spec(filename):
     saved mel shape [n_frames, 80]
     '''
     y, sample_rate = librosa.load(filename,sr=16000)
-    #y, _ = librosa.effects.trim(y,top_db=20)
+    y, _ = librosa.effects.trim(y,top_db=20)
 
     spec = librosa.core.stft(y=y, 
                              n_fft=2048, 
@@ -35,27 +35,19 @@ def extract_mel_spec(filename):
                                                      )
     log_mel_spectrogram = np.log(mel_spectrogram).astype(np.float32)
 
-    #filename = filename.replace('/data06_2/','/data07/zhoukun/')
-    #file_test = filename[:-17]
+    filename = filename.replace('/data06_2/','/data07/zhoukun/')
+    file_test = filename[:-13]
+    if not os.path.isdir(file_test):
 
-    file_test = filename.replace('/wav','/mel') # /mel or /spec?
-    file_test_dir = file_test[:-16]
-    if not os.path.isdir(file_test_dir):
+        os.mkdir(file_test)
 
-        os.makedirs(file_test_dir)
+    filename_1 = filename.replace(".wav", ".spec")
 
-    #filename_1 = filename.replace(".wav", ".spec")
-
-    #np.save(file=filename_1, arr=log_spectrogram.T)
+    np.save(file=filename_1, arr=log_spectrogram.T)
 
     #filename_2 = filename.replace(".wav", ".mel")
 
     #np.save(file=filename_2, arr=log_mel_spectrogram.T)
-
-    filename_1 = file_test.replace('.wav', '.mel')
-    np.save(file=filename_1,arr=log_mel_spectrogram.T)
-    #filename_1 = file_test.replace('.wav', '.spec')
-    #np.save(file=filename_1,arr=log_spectrogram.T)
 
 def extract_phonemes(filename):
     from phonemizer.phonemize import phonemize
@@ -67,10 +59,8 @@ def extract_phonemes(filename):
     with open(filename) as f:
         text=f.read()
         phones = phonemize(text, language='en-us', backend='festival', separator=Separator(phone=' ', syllable='', word=''))
-    #filename = filename.replace('/data06_2/', '/data07/zhoukun/')
-    #file_test = filename[:-16]
-    filename = filename.replace('/text','/phones')
-    file_test = filename[:-16]
+    filename = filename.replace('/data06_2/', '/data07/zhoukun/')
+    file_test = filename[:-13]
     if not os.path.isdir(file_test):
         os.mkdir(file_test)
     with open(filename.replace(".txt", ".phones"), "w") as outfile:
@@ -98,14 +88,12 @@ def extract_dir(root, kind):
             abs_path = os.path.abspath(os.path.join(dirpath, f))
             if abs_path.endswith(ext):
                  abs_paths.append(abs_path)
-    print(abs_paths)
+    #print(abs_paths)
     pool = Pool(cpu_count())
     pool.map(extraction_function,abs_paths)
 
     #estimate and save mean std statistics in root dir.
-    #root = root.replace('/data06_2/', '/data07/zhoukun/')
-    #root = root.replace('wav','mel')
-    root = root.replace('wav', 'mel')
+    root = root.replace('/data06_2/', '/data07/zhoukun/')
     if not os.path.exists(root):
         os.makedirs(root)
     estimate_mean_std(root)
@@ -129,27 +117,24 @@ def estimate_mean_std(root, num=2000):
                 mels.append(np.load(path))
                 counter_mel += 1
     
-    #specs = np.vstack(specs)
-    mels = np.vstack(mels)
+    specs = np.vstack(specs)
+    #mels = np.vstack(mels)
 
-    mel_mean = np.mean(mels,axis=0)
-    mel_std = np.std(mels, axis=0)
-    #spec_mean = np.mean(specs, axis=0)
-    #spec_std = np.std(specs, axis=0)
+    #mel_mean = np.mean(mels,axis=0)
+    #mel_std = np.std(mels, axis=0)
+    spec_mean = np.mean(specs, axis=0)
+    spec_std = np.std(specs, axis=0)
 
-    #np.save(os.path.join(root,"spec_mean_std.npy"),
-        #[spec_mean, spec_std])
+    np.save(os.path.join(root,"spec_mean_std.npy"),
+        [spec_mean, spec_std])
 
 
 
-    np.save(os.path.join(root,"mel_mean_std.npy"),[mel_mean, mel_std])
+    #np.save(os.path.join(root,"mel_mean_std.npy"),[mel_mean, mel_std])
 
         
 if __name__ == "__main__":
     
-    #path = '/data06_2/CMU_ARCTIC/cmu_us_awb_arctic/wav'
-    path = '/home/zhoukun/nonparaSeq2seqVC_code-master/0013/wav'
+    path = '/data06_2/VCTK-Corpus/wav48'
     kind = 'audio'
-
     extract_dir(path,kind)
-    
