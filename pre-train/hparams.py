@@ -8,7 +8,7 @@ def create_hparams(hparams_string=None, verbose=False):
         ################################
         # Experiment Parameters        #
         ################################
-        epochs=100,
+        epochs=200,
         iters_per_checkpoint=100,
         seed=1234,
         dynamic_loss_scaling=True,
@@ -21,10 +21,9 @@ def create_hparams(hparams_string=None, verbose=False):
         ################################
         # Data Parameters              #
         ################################
-        training_list='/home/zhoukun/nonparaSeq2seqVC_code-master/pre-train/reader/emotion_list/training_mel_list.txt',
-        validation_list='/home/zhoukun/nonparaSeq2seqVC_code-master/pre-train/reader/emotion_list/evaluation_mel_list.txt',
-        #mel_mean_std='/data07/zhoukun/VCTK-Corpus/mel_mean_std.npy',
-        mel_mean_std = '/home/zhoukun/nonparaSeq2seqVC_code-master/0013/mel_mean_std.npy',
+        training_list='./reader/training_mel_list.txt',
+        validation_list='./reader/evaluation_mel_list.txt',
+        mel_mean_std='/data07/zhoukun/VCTK-Corpus/mel_mean_std.npy',
         ################################
         # Data Parameters              #
         ################################
@@ -33,7 +32,7 @@ def create_hparams(hparams_string=None, verbose=False):
         n_symbols=41, #
         pretrain_n_speakers=99, #
 
-        n_speakers=5, #
+        n_speakers=99, #
         predict_spectrogram=False,
 
         ################################
@@ -103,20 +102,13 @@ def create_hparams(hparams_string=None, verbose=False):
         grad_clip_thresh=5.0,
         batch_size=32,
         #batch_size = 8,
-        warmup = 7,
-        decay_rate = 0.5,
-        decay_every = 7,
-
-
 
 
         contrastive_loss_w=30.0,
-        #speaker_encoder_loss_w=1.0,
-        speaker_encoder_loss_w=5.0,
-        text_classifier_loss_w=5.0,
+        speaker_encoder_loss_w=1.0,
+        text_classifier_loss_w=1.0,
         speaker_adversial_loss_w=20.,
-        #speaker_classifier_loss_w=0.1,
-        speaker_classifier_loss_w=5.0,
+        speaker_classifier_loss_w=0.1,
         ce_loss=False
     )
 
