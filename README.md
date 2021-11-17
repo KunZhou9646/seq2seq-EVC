@@ -26,6 +26,7 @@ You need to download VCTK corpus and customize it accordingly, and then perform 
 ```Bash
 $ cd reader
 $ python extract_features.py (please customize "path" and "kind", and edit the codes for "spec" or "mel-spec")
+$ python generate_list_mel.py
 ```
 
 **3. Stage I: Style Pre-training**
@@ -42,6 +43,7 @@ You need to download ESD corpus and customize it accordingly, and then perform f
 ```Bash
 $ cd reader
 $ python extract_features.py (please customize "path" and "kind", and edit the codes for "spec" or "mel-spec")
+$ python generate_list_mel.py
 ```
 
 **5. Stage II: Emotion Training**
