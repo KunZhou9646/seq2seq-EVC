@@ -12,7 +12,7 @@ from torch.utils.data.distributed import DistributedSampler
 from torch.utils.data import DataLoader
 
 from model import Parrot, ParrotLoss, lcm
-from reader import TextMelIDLoader, TextMelIDCollate, id2sp
+from reader import TextMelIDLoader, TextMelIDCollate
 from logger import ParrotLogger
 from hparams import create_hparams
 
@@ -50,11 +50,8 @@ def init_distributed(hparams, n_gpus, rank, group_name):
 
 def prepare_dataloaders(hparams):
     # Get data, data loaders and collate function ready
-    #pids = [id2sp[hparams.speaker_A], id2sp[hparams.speaker_B]]
-    trainset = TextMelIDLoader(hparams.training_list, hparams.mel_mean_std, 
-        hparams.speaker_A, hparams.speaker_B, pids=None)
-    valset = TextMelIDLoader(hparams.validation_list, hparams.mel_mean_std,
-        hparams.speaker_A, hparams.speaker_B, pids=None)
+    trainset = TextMelIDLoader(hparams.training_list, hparams.mel_mean_std)
+    valset = TextMelIDLoader(hparams.validation_list, hparams.mel_mean_std)
     collate_fn = TextMelIDCollate(lcm(hparams.n_frames_per_step_encoder,
                                       hparams.n_frames_per_step_decoder))
 
@@ -80,7 +77,8 @@ def prepare_directories_and_logger(output_directory, log_directory, rank):
 
 
 def load_model(hparams):
-    model = Parrot(hparams).cuda()
+    device = 'cuda' if torch.cuda.is_available() else 'cpu'
+    model = Parrot(hparams).to(device)
     if hparams.distributed_run:
         model = apply_gradient_allreduce(model)
 
@@ -88,11 +86,28 @@ def load_model(hparams):
 
 
 def warm_start_model(checkpoint_path, model):
-    print(checkpoint_path)
     assert os.path.isfile(checkpoint_path)
     print(("Warm starting model from checkpoint '{}'".format(checkpoint_path)))
     checkpoint_dict = torch.load(checkpoint_path, map_location='cpu')
-    model.load_state_dict(checkpoint_dict['state_dict'], strict=False) #
+    new_state_dict = {}
+    new_state_dict = {}
+    for k, v in checkpoint_dict['state_dict'].items():
+        if k not in ['speaker_encoder.projection2.linear_layer.weight',
+                     'speaker_encoder.projection2.linear_layer.bias',
+                     'speaker_classifier.projection.linear_layer.weight',
+                     'speaker_classifier.projection.linear_layer.bias']:
+            new_state_dict[k] = v
+        else:
+            s = v.size()
+            if len(s) == 2:
+                new_state_dict[k] = torch.nn.init.normal_(torch.empty((4, s[1])))
+            else:
+                new_state_dict[k] = torch.nn.init.normal_(torch.empty(4))
+            #new_state_dict[k].weight.requires_grad = False
+            #new_state_dict[k].bias.requires_grad = False
+
+    model.load_state_dict(new_state_dict,strict=False)
+    #model.load_state_dict(torch.load(checkpoint_path)['state_dict'], strict=False)
     return model
 
 
@@ -127,7 +142,7 @@ def validate(model, criterion, valset, iteration, batch_size, n_gpus,
     with torch.no_grad():
         val_sampler = DistributedSampler(valset) if distributed_run else None
         val_loader = DataLoader(valset, sampler=val_sampler, num_workers=1,
-                                shuffle=False, batch_size=2,
+                                shuffle=False, batch_size=batch_size,
                                 drop_last=True,
                                 pin_memory=False, collate_fn=collate_fn)
 
@@ -144,7 +159,7 @@ def validate(model, criterion, valset, iteration, batch_size, n_gpus,
             else:
                 y_pred = model(x, False)
             
-            losses, acces, l_main, l_sc = criterion(y_pred, y)
+            losses, acces, l_main, l_sc = criterion(y_pred, y, False)
             if distributed_run:
                 reduced_val_losses = []
                 reduced_val_acces = []
@@ -217,7 +232,10 @@ def train(output_directory, log_directory, checkpoint_path, warm_start, n_gpus,
     torch.manual_seed(hparams.seed)
     torch.cuda.manual_seed(hparams.seed)
 
+    device = 'cuda' if torch.cuda.is_available() else 'cpu'
     model = load_model(hparams)
+    model = model.to(device)
+
     learning_rate = hparams.learning_rate
 
     parameters_main, parameters_sc = model.grouped_parameters()
@@ -254,37 +272,39 @@ def train(output_directory, log_directory, checkpoint_path, warm_start, n_gpus,
     model.train()
     # ================ MAIN TRAINNIG LOOP! ===================
     for epoch in range(epoch_offset, hparams.epochs):
-
+        print(("Epoch: {}".format(epoch)))
         if epoch > hparams.warmup:
             learning_rate = hparams.learning_rate * hparams.decay_rate ** ((epoch - hparams.warmup) // hparams.decay_every + 1)
 
         for i, batch in enumerate(train_loader):
+
             start = time.time()
+            
             for param_group in optimizer_main.param_groups:
                 param_group['lr'] = learning_rate
             
             for param_group in optimizer_sc.param_groups:
                 param_group['lr'] = learning_rate
+            
+
 
             model.zero_grad()
             x, y = model.parse_batch(batch)
 
             if i % 2 == 0:
                 y_pred = model(x, True)
+                losses, acces, l_main, l_sc  = criterion(y_pred, y, True)
             else:
                 y_pred = model(x, False)
-
-            losses, acces, l_main, l_sc  = criterion(y_pred, y)
+                losses, acces, l_main, l_sc  = criterion(y_pred, y, False)
 
             if hparams.distributed_run:
                 reduced_losses = []
                 for l in losses:
                     reduced_losses.append(reduce_tensor(l.data, n_gpus).item())
-                
                 reduced_acces = []
                 for a in acces:
                     reduced_acces.append(reduce_tensor(a.data, n_gpus).item())
-                
                 redl_main = reduce_tensor(l_main.data, n_gpus).item()
                 redl_sc = reduce_tensor(l_sc.data, n_gpus).item()
             else:
@@ -295,14 +315,10 @@ def train(output_directory, log_directory, checkpoint_path, warm_start, n_gpus,
 
             for p in parameters_sc:
                 p.requires_grad_(requires_grad=False)
-            
-            if hparams.fp16_run:
-                optimizer.backward(loss)
-                grad_norm = optimizer.clip_fp32_grads(hparams.grad_clip_thresh)
-            else:
-                l_main.backward(retain_graph=True)
-                grad_norm_main = torch.nn.utils.clip_grad_norm_(
-                    parameters_main, hparams.grad_clip_thresh)
+          
+            l_main.backward(retain_graph=True)
+            grad_norm_main = torch.nn.utils.clip_grad_norm_(
+                parameters_main, hparams.grad_clip_thresh)
 
             optimizer_main.step()
 
@@ -310,17 +326,18 @@ def train(output_directory, log_directory, checkpoint_path, warm_start, n_gpus,
                 p.requires_grad_(requires_grad=True)
             for p in parameters_main:
                 p.requires_grad_(requires_grad=False)
-
+            
+         
             l_sc.backward()
             grad_norm_sc = torch.nn.utils.clip_grad_norm_(
                 parameters_sc, hparams.grad_clip_thresh)
+
 
             optimizer_sc.step()
 
             for p in parameters_main:
                 p.requires_grad_(requires_grad=True)
 
-        
             if not math.isnan(redl_main) and rank == 0:
 
                 duration = time.time() - start
@@ -336,8 +353,7 @@ def train(output_directory, log_directory, checkpoint_path, warm_start, n_gpus,
                          hparams.distributed_run, rank)
                 if rank == 0:
                     checkpoint_path = os.path.join(
-                        os.path.join(output_directory,log_directory), 
-                        "checkpoint_{}".format(iteration))
+                        output_directory, "checkpoint_{}".format(iteration))
                     save_checkpoint(model, optimizer_main, optimizer_sc, learning_rate, iteration,
                                     checkpoint_path)
 
@@ -345,7 +361,7 @@ def train(output_directory, log_directory, checkpoint_path, warm_start, n_gpus,
 
 
 if __name__ == '__main__':
-    CUDA_VISIBLE_DEVICES = 2
+    
     parser = argparse.ArgumentParser()
     parser.add_argument('-o', '--output_directory', type=str,
                         help='directory to save checkpoints')
