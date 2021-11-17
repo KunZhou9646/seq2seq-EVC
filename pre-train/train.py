@@ -50,11 +50,8 @@ def init_distributed(hparams, n_gpus, rank, group_name):
 
 def prepare_dataloaders(hparams):
     # Get data, data loaders and collate function ready
-    #pids = [id2sp[hparams.speaker_A], id2sp[hparams.speaker_B]]
-    trainset = TextMelIDLoader(hparams.training_list, hparams.mel_mean_std, 
-        hparams.speaker_A, hparams.speaker_B, pids=None)
-    valset = TextMelIDLoader(hparams.validation_list, hparams.mel_mean_std,
-        hparams.speaker_A, hparams.speaker_B, pids=None)
+    trainset = TextMelIDLoader(hparams.training_list, hparams.mel_mean_std)
+    valset = TextMelIDLoader(hparams.validation_list, hparams.mel_mean_std)
     collate_fn = TextMelIDCollate(lcm(hparams.n_frames_per_step_encoder,
                                       hparams.n_frames_per_step_decoder))
 
@@ -66,7 +63,6 @@ def prepare_dataloaders(hparams):
                               batch_size=hparams.batch_size, pin_memory=False,
                               drop_last=True, collate_fn=collate_fn)
     return train_loader, valset, collate_fn
-
 
 def prepare_directories_and_logger(output_directory, log_directory, rank):
     if rank == 0:
