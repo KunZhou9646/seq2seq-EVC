@@ -100,9 +100,9 @@ def warm_start_model(checkpoint_path, model):
         else:
             s = v.size()
             if len(s) == 2:
-                new_state_dict[k] = torch.nn.init.normal_(torch.empty((4, s[1])))
+                new_state_dict[k] = torch.nn.init.normal_(torch.empty((5, s[1])))
             else:
-                new_state_dict[k] = torch.nn.init.normal_(torch.empty(4))
+                new_state_dict[k] = torch.nn.init.normal_(torch.empty(5))
             #new_state_dict[k].weight.requires_grad = False
             #new_state_dict[k].bias.requires_grad = False
 
