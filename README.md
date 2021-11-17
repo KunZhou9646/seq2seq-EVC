@@ -19,6 +19,14 @@ We use ESD database, which is an emotional speech database that can be downloade
 ```Bash
 $ pip install -r requirements.txt
 ```
+
+**2. Pre-processing for Stage I: Style Pre-training**
+You need to download VCTK corpus and customize it accordingly, and then perform feature extraction:
+```Bash
+$ cd reader
+$ python extract_features.py (please customize "path" and "kind", and edit the codes for "spec" or "mel-spec")
+```
+
 **2. Stage I: Style Pre-training**
 
 The pre-training procedure is same as the pretraining in  https://github.com/jxzhanggg/nonparaSeq2seqVC_code. You can download the pre-trained models from Stage I: Style Initialization here: https://drive.google.com/file/d/1oqk-PSREwpFNTyeREwcUry13WZ1LYl6U/view?usp=sharing. With the released pre-trained models, you can directly perform Stage II: Emotion Training. If you would like to pre-train it by yourself, you can try the following:
