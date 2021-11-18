@@ -1,0 +1,4 @@
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/librosa/core/spectrum.py:224: UserWarning: n_fft=2048 is too small for input signal of length=1427
+  n_fft, y.shape[-1]
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/librosa/core/spectrum.py:224: UserWarning: n_fft=2048 is too small for input signal of length=1388
+  n_fft, y.shape[-1]

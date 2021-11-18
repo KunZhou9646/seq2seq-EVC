@@ -1,0 +1,2130 @@
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:516: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:517: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:518: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:519: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:520: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:525: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:541: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:542: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:543: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:544: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:545: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py:550: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+WARNING:tensorflow:
+The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+  * https://github.com/tensorflow/io (for I/O related ops)
+If you depend on functionality not listed there, please file an issue.
+
+('Distributed Run:', False)
+('cuDNN Enabled:', True)
+('cuDNN Benchmark:', False)
+Warm starting model from checkpoint '/home/zhoukun/nonparaSeq2seqVC_code-master/pre-train/outdir/checkpoint_234000'
+Epoch: 0
+Train TTS 0 14.739287 Grad Norm 14.129372 2.83s/it
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1320: UserWarning: nn.functional.tanh is deprecated. Use torch.tanh instead.
+  warnings.warn("nn.functional.tanh is deprecated. Use torch.tanh instead.")
+/home/zhoukun/nonparaSeq2seqVC_code-master/pre-train_IS/model/loss.py:111: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  padded = torch.tensor(text_target.data.new(B,1).zero_())
+Validation loss 0: TTS 12.749276  VC 11.911240
+Saving model and optimizer state at iteration 0 to outdir_emotion_IS/checkpoint_0
+Train VC 1 11.436504 Grad Norm 10.732797 1.17s/it
+Train TTS 2 10.373316 Grad Norm 10.782217 0.86s/it
+Train VC 3 10.219353 Grad Norm 12.482866 0.91s/it
+Train TTS 4 10.420271 Grad Norm 10.469118 0.91s/it
+Train VC 5 7.361836 Grad Norm 8.893884 0.81s/it
+Train TTS 6 7.157355 Grad Norm 7.276618 1.01s/it
+Train VC 7 6.904676 Grad Norm 8.411402 0.90s/it
+Train TTS 8 7.211053 Grad Norm 9.451004 0.93s/it
+Train VC 9 6.385258 Grad Norm 9.596679 0.90s/it
+Train TTS 10 7.377606 Grad Norm 10.743232 1.12s/it
+Train VC 11 5.452778 Grad Norm 5.889575 0.86s/it
+Train TTS 12 4.038841 Grad Norm 5.931533 1.12s/it
+Train VC 13 4.429521 Grad Norm 4.340682 1.07s/it
+Train TTS 14 4.615505 Grad Norm 4.922340 0.81s/it
+Train VC 15 4.428618 Grad Norm 8.819391 0.97s/it
+Train TTS 16 4.159164 Grad Norm 6.423111 1.00s/it
+Train VC 17 4.474310 Grad Norm 5.442360 0.85s/it
+Train TTS 18 4.341942 Grad Norm 6.284186 0.83s/it
+Train VC 19 3.670194 Grad Norm 6.997830 1.04s/it
+Train TTS 20 3.688984 Grad Norm 4.416080 1.02s/it
+Train VC 21 3.098885 Grad Norm 4.198822 1.08s/it
+Train TTS 22 3.311944 Grad Norm 5.204063 0.92s/it
+Train VC 23 3.097896 Grad Norm 4.266982 0.93s/it
+Train TTS 24 3.299379 Grad Norm 4.736546 0.85s/it
+Train VC 25 2.857668 Grad Norm 5.698103 0.99s/it
+Train TTS 26 3.230653 Grad Norm 4.679837 0.90s/it
+Train VC 27 2.860827 Grad Norm 3.588587 0.94s/it
+Train TTS 28 2.050793 Grad Norm 2.553347 0.89s/it
+Train VC 29 2.457422 Grad Norm 3.564295 1.02s/it
+Train TTS 30 2.097799 Grad Norm 3.386078 1.03s/it
+Train VC 31 1.986720 Grad Norm 2.699821 0.86s/it
+Train TTS 32 2.766372 Grad Norm 4.034386 0.96s/it
+Train VC 33 2.449687 Grad Norm 4.149271 1.05s/it
+Train TTS 34 1.972008 Grad Norm 3.497684 0.89s/it
+Train VC 35 2.099916 Grad Norm 3.488969 0.92s/it
+Train TTS 36 1.953355 Grad Norm 3.624248 0.88s/it
+Epoch: 1
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1332: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1332: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1320: UserWarning: nn.functional.tanh is deprecated. Use torch.tanh instead.
+  warnings.warn("nn.functional.tanh is deprecated. Use torch.tanh instead.")
+/home/zhoukun/nonparaSeq2seqVC_code-master/pre-train_IS/model/loss.py:111: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  padded = torch.tensor(text_target.data.new(B,1).zero_())
+Train TTS 37 1.650755 Grad Norm 3.195542 0.88s/it
+Train VC 38 1.668690 Grad Norm 3.056467 0.95s/it
+Train TTS 39 1.769159 Grad Norm 3.276531 0.80s/it
+Train VC 40 1.602191 Grad Norm 3.187198 1.15s/it
+Train TTS 41 1.568014 Grad Norm 2.538358 1.09s/it
+Train VC 42 1.397425 Grad Norm 2.610774 1.05s/it
+Train TTS 43 1.511829 Grad Norm 1.974563 1.05s/it
+Train VC 44 1.278158 Grad Norm 1.591780 1.01s/it
+Train TTS 45 1.418569 Grad Norm 2.214047 1.00s/it
+Train VC 46 1.796647 Grad Norm 3.464662 0.93s/it
+Train TTS 47 1.247173 Grad Norm 1.689915 0.99s/it
+Train VC 48 1.371193 Grad Norm 2.324660 0.88s/it
+Train TTS 49 1.692177 Grad Norm 3.346038 0.88s/it
+Train VC 50 1.480014 Grad Norm 2.297887 0.94s/it
+Train TTS 51 1.334822 Grad Norm 1.776881 0.97s/it
+Train VC 52 1.288310 Grad Norm 1.895250 0.91s/it
+Train TTS 53 1.547020 Grad Norm 2.467060 1.03s/it
+Train VC 54 1.385919 Grad Norm 2.933065 0.98s/it
+Train TTS 55 1.467442 Grad Norm 3.129843 0.95s/it
+Train VC 56 1.583673 Grad Norm 3.426531 1.14s/it
+Train TTS 57 1.288801 Grad Norm 2.597429 1.06s/it
+Train VC 58 1.279683 Grad Norm 1.731445 0.98s/it
+Train TTS 59 1.324717 Grad Norm 2.190816 0.93s/it
+Train VC 60 1.206071 Grad Norm 1.598409 0.94s/it
+Train TTS 61 1.511894 Grad Norm 2.051268 0.90s/it
+Train VC 62 1.120303 Grad Norm 1.345223 0.85s/it
+Train TTS 63 1.183943 Grad Norm 1.849483 1.08s/it
+Train VC 64 1.323038 Grad Norm 2.393055 1.10s/it
+Train TTS 65 1.585595 Grad Norm 3.690825 1.01s/it
+Train VC 66 1.687392 Grad Norm 3.639252 1.12s/it
+Train TTS 67 1.268964 Grad Norm 2.264884 1.10s/it
+Train VC 68 1.287117 Grad Norm 2.594827 0.90s/it
+Train TTS 69 1.182691 Grad Norm 1.316341 0.93s/it
+Train VC 70 1.229093 Grad Norm 2.933086 0.90s/it
+Train TTS 71 1.186539 Grad Norm 2.044362 0.87s/it
+Train VC 72 1.240940 Grad Norm 2.520551 1.07s/it
+Train TTS 73 1.121108 Grad Norm 1.806142 0.80s/it
+Epoch: 2
+Train TTS 74 0.970977 Grad Norm 1.359690 1.00s/it
+Train VC 75 0.920485 Grad Norm 1.555713 0.96s/it
+Train TTS 76 1.108822 Grad Norm 2.220383 0.95s/it
+Train VC 77 1.140741 Grad Norm 2.426165 0.87s/it
+Train TTS 78 1.000873 Grad Norm 1.344579 0.99s/it
+Train VC 79 0.960914 Grad Norm 1.202163 0.94s/it
+Train TTS 80 1.069751 Grad Norm 1.841392 1.16s/it
+Train VC 81 1.073892 Grad Norm 1.544899 0.74s/it
+Train TTS 82 0.992192 Grad Norm 1.038877 0.88s/it
+Train VC 83 1.124169 Grad Norm 1.828710 0.98s/it
+Train TTS 84 0.946342 Grad Norm 1.452473 1.12s/it
+Train VC 85 0.992798 Grad Norm 1.143563 1.05s/it
+Train TTS 86 1.240608 Grad Norm 1.662955 0.91s/it
+Train VC 87 0.883875 Grad Norm 1.002467 0.83s/it
+Train TTS 88 1.083365 Grad Norm 2.178410 0.92s/it
+Train VC 89 0.984980 Grad Norm 1.040635 0.84s/it
+Train TTS 90 0.892082 Grad Norm 1.860451 0.97s/it
+Train VC 91 0.941157 Grad Norm 1.724450 1.14s/it
+Train TTS 92 0.888829 Grad Norm 1.177928 1.10s/it
+Train VC 93 0.875623 Grad Norm 0.841755 0.91s/it
+Train TTS 94 0.965755 Grad Norm 2.103798 1.05s/it
+Train VC 95 1.076141 Grad Norm 1.635653 1.17s/it
+Train TTS 96 0.963233 Grad Norm 0.912008 0.93s/it
+Train VC 97 0.911015 Grad Norm 0.864294 0.95s/it
+Train TTS 98 1.049411 Grad Norm 1.485332 1.04s/it
+Train VC 99 0.896363 Grad Norm 1.138834 1.02s/it
+Train TTS 100 0.922385 Grad Norm 1.603420 0.99s/it
+Validation loss 100: TTS  1.956564  VC  2.139208
+Saving model and optimizer state at iteration 100 to outdir_emotion_IS/checkpoint_100
+Train VC 101 0.824517 Grad Norm 0.952129 1.10s/it
+Train TTS 102 0.888442 Grad Norm 1.361597 1.08s/it
+Train VC 103 0.798572 Grad Norm 0.937197 0.89s/it
+Train TTS 104 0.843846 Grad Norm 0.988533 0.89s/it
+Train VC 105 0.927569 Grad Norm 1.491399 1.06s/it
+Train TTS 106 0.966774 Grad Norm 1.430391 1.01s/it
+Train VC 107 0.841042 Grad Norm 1.163474 0.92s/it
+Train TTS 108 0.836976 Grad Norm 1.086390 1.10s/it
+Train VC 109 0.804335 Grad Norm 1.225981 0.85s/it
+Train TTS 110 0.822588 Grad Norm 1.370018 0.91s/it
+Epoch: 3
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1332: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1332: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1320: UserWarning: nn.functional.tanh is deprecated. Use torch.tanh instead.
+  warnings.warn("nn.functional.tanh is deprecated. Use torch.tanh instead.")
+/home/zhoukun/nonparaSeq2seqVC_code-master/pre-train_IS/model/loss.py:111: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  padded = torch.tensor(text_target.data.new(B,1).zero_())
+Train TTS 111 0.780167 Grad Norm 0.689261 1.03s/it
+Train VC 112 0.851466 Grad Norm 1.299745 1.09s/it
+Train TTS 113 0.847917 Grad Norm 0.931851 0.94s/it
+Train VC 114 0.787978 Grad Norm 0.965455 0.90s/it
+Train TTS 115 0.761178 Grad Norm 0.811630 1.08s/it
+Train VC 116 0.766469 Grad Norm 0.828315 0.90s/it
+Train TTS 117 0.723836 Grad Norm 0.565230 1.10s/it
+Train VC 118 0.677411 Grad Norm 0.368648 0.93s/it
+Train TTS 119 0.849761 Grad Norm 1.532274 0.93s/it
+Train VC 120 0.705686 Grad Norm 0.494436 0.97s/it
+Train TTS 121 0.937540 Grad Norm 1.349224 0.86s/it
+Train VC 122 0.719844 Grad Norm 0.767557 0.93s/it
+Train TTS 123 0.810585 Grad Norm 0.752859 1.06s/it
+Train VC 124 0.747258 Grad Norm 0.470264 0.90s/it
+Train TTS 125 0.717365 Grad Norm 0.646860 0.90s/it
+Train VC 126 0.770308 Grad Norm 1.028782 0.95s/it
+Train TTS 127 0.782059 Grad Norm 0.647518 0.92s/it
+Train VC 128 0.933870 Grad Norm 2.127787 1.16s/it
+Train TTS 129 0.812595 Grad Norm 0.921713 1.13s/it
+Train VC 130 0.773075 Grad Norm 2.577918 1.00s/it
+Train TTS 131 0.751535 Grad Norm 0.611159 0.90s/it
+Train VC 132 0.725231 Grad Norm 0.570807 0.94s/it
+Train TTS 133 0.752780 Grad Norm 0.566051 1.02s/it
+Train VC 134 0.781624 Grad Norm 0.719075 1.06s/it
+Train TTS 135 0.852036 Grad Norm 0.725181 1.18s/it
+Train VC 136 0.761729 Grad Norm 0.726032 1.07s/it
+Train TTS 137 0.747605 Grad Norm 0.574420 0.99s/it
+Train VC 138 0.772187 Grad Norm 5.024697 0.97s/it
+Train TTS 139 0.747412 Grad Norm 0.527808 0.96s/it
+Train VC 140 0.899805 Grad Norm 1.443841 1.12s/it
+Train TTS 141 0.859801 Grad Norm 1.024741 1.05s/it
+Train VC 142 0.778973 Grad Norm 0.685689 0.89s/it
+Train TTS 143 0.798048 Grad Norm 0.921151 0.89s/it
+Train VC 144 0.772388 Grad Norm 0.873895 0.95s/it
+Train TTS 145 0.755946 Grad Norm 0.626128 1.13s/it
+Train VC 146 0.701478 Grad Norm 0.437189 0.98s/it
+Train TTS 147 0.731533 Grad Norm 0.555057 0.98s/it
+Epoch: 4
+Train TTS 148 1.153857 Grad Norm 1.503359 1.03s/it
+Train VC 149 0.855227 Grad Norm 0.994571 0.95s/it
+Train TTS 150 0.783895 Grad Norm 0.946535 0.95s/it
+Train VC 151 0.785027 Grad Norm 0.659258 0.93s/it
+Train TTS 152 0.816496 Grad Norm 1.141856 0.84s/it
+Train VC 153 0.747937 Grad Norm 0.713395 1.14s/it
+Train TTS 154 0.740704 Grad Norm 1.057266 0.96s/it
+Train VC 155 0.697328 Grad Norm 0.560114 0.86s/it
+Train TTS 156 0.730837 Grad Norm 0.492636 0.91s/it
+Train VC 157 0.766183 Grad Norm 0.638750 1.09s/it
+Train TTS 158 0.887546 Grad Norm 0.953176 0.88s/it
+Train VC 159 0.750139 Grad Norm 0.725105 0.91s/it
+Train TTS 160 0.750495 Grad Norm 0.585097 0.93s/it
+Train VC 161 0.737221 Grad Norm 0.861734 0.88s/it
+Train TTS 162 0.770699 Grad Norm 0.603820 0.93s/it
+Train VC 163 0.719200 Grad Norm 0.530115 1.12s/it
+Train TTS 164 0.722438 Grad Norm 0.465919 0.81s/it
+Train VC 165 0.765075 Grad Norm 1.317999 1.19s/it
+Train TTS 166 0.795267 Grad Norm 1.353681 0.94s/it
+Train VC 167 0.740346 Grad Norm 0.823179 1.09s/it
+Train TTS 168 0.821654 Grad Norm 0.816016 0.83s/it
+Train VC 169 0.689490 Grad Norm 0.495194 1.00s/it
+Train TTS 170 0.750205 Grad Norm 0.959442 0.93s/it
+Train VC 171 0.710870 Grad Norm 0.571873 0.91s/it
+Train TTS 172 0.766137 Grad Norm 0.521441 1.15s/it
+Train VC 173 0.726493 Grad Norm 0.774889 1.09s/it
+Train TTS 174 0.723670 Grad Norm 0.601133 0.97s/it
+Train VC 175 0.685699 Grad Norm 0.465588 1.11s/it
+Train TTS 176 0.735903 Grad Norm 0.479451 1.21s/it
+Train VC 177 0.701946 Grad Norm 0.512163 1.13s/it
+Train TTS 178 0.763095 Grad Norm 0.701320 0.93s/it
+Train VC 179 0.837694 Grad Norm 1.077783 0.93s/it
+Train TTS 180 0.968522 Grad Norm 1.561779 1.09s/it
+Train VC 181 0.779828 Grad Norm 0.771047 1.06s/it
+Train TTS 182 0.815251 Grad Norm 0.933215 1.00s/it
+Train VC 183 0.703347 Grad Norm 0.443006 0.89s/it
+Train TTS 184 0.720328 Grad Norm 0.600164 0.88s/it
+Epoch: 5
+Train TTS 185 0.721454 Grad Norm 0.546547 1.21s/it
+Train VC 186 0.734256 Grad Norm 0.544370 0.95s/it
+Train TTS 187 0.768562 Grad Norm 0.619099 1.01s/it
+Train VC 188 0.690966 Grad Norm 0.384543 0.91s/it
+Train TTS 189 0.748637 Grad Norm 0.686145 0.95s/it
+Train VC 190 0.690921 Grad Norm 0.567650 0.88s/it
+Train TTS 191 0.717927 Grad Norm 0.572619 0.89s/it
+Train VC 192 0.679633 Grad Norm 0.404661 1.06s/it
+Train TTS 193 0.674370 Grad Norm 0.508640 1.06s/it
+Train VC 194 0.727018 Grad Norm 1.112460 1.00s/it
+Train TTS 195 0.707377 Grad Norm 0.463626 1.11s/it
+Train VC 196 0.765818 Grad Norm 0.520460 0.92s/it
+Train TTS 197 0.797420 Grad Norm 0.551239 1.04s/it
+Train VC 198 0.724866 Grad Norm 0.450630 0.84s/it
+Train TTS 199 0.716729 Grad Norm 0.372394 0.94s/it
+Train VC 200 0.694146 Grad Norm 0.588342 1.18s/it
+Validation loss 200: TTS  1.889358  VC  2.141706
+Saving model and optimizer state at iteration 200 to outdir_emotion_IS/checkpoint_200
+Train TTS 201 0.683648 Grad Norm 0.323664 0.92s/it
+Train VC 202 0.634508 Grad Norm 0.318747 0.91s/it
+Train TTS 203 0.690612 Grad Norm 0.313819 0.92s/it
+Train VC 204 0.701405 Grad Norm 0.597257 0.90s/it
+Train TTS 205 0.781474 Grad Norm 0.633778 0.93s/it
+Train VC 206 0.706986 Grad Norm 1.347542 0.96s/it
+Train TTS 207 0.692051 Grad Norm 0.727945 0.89s/it
+Train VC 208 0.700272 Grad Norm 0.377547 1.06s/it
+Train TTS 209 0.666255 Grad Norm 0.316730 0.88s/it
+Train VC 210 0.761426 Grad Norm 0.499148 1.10s/it
+Train TTS 211 0.674124 Grad Norm 0.315345 0.86s/it
+Train VC 212 0.711333 Grad Norm 0.447670 1.06s/it
+Train TTS 213 0.679536 Grad Norm 0.391820 0.90s/it
+Train VC 214 0.686119 Grad Norm 0.379595 0.92s/it
+Train TTS 215 0.666982 Grad Norm 0.520356 0.99s/it
+Train VC 216 0.680381 Grad Norm 0.445414 1.10s/it
+Train TTS 217 0.754968 Grad Norm 0.411552 0.88s/it
+Train VC 218 0.774699 Grad Norm 0.607229 0.94s/it
+Train TTS 219 0.847861 Grad Norm 0.485297 0.96s/it
+Train VC 220 0.806137 Grad Norm 0.539648 0.82s/it
+Train TTS 221 0.710690 Grad Norm 0.492231 1.08s/it
+Epoch: 6
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1332: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1332: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1320: UserWarning: nn.functional.tanh is deprecated. Use torch.tanh instead.
+  warnings.warn("nn.functional.tanh is deprecated. Use torch.tanh instead.")
+/home/zhoukun/nonparaSeq2seqVC_code-master/pre-train_IS/model/loss.py:111: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  padded = torch.tensor(text_target.data.new(B,1).zero_())
+Train TTS 222 0.752391 Grad Norm 0.524698 1.01s/it
+Train VC 223 0.714274 Grad Norm 0.517676 1.06s/it
+Train TTS 224 0.892506 Grad Norm 1.149769 1.17s/it
+Train VC 225 0.838789 Grad Norm 0.774385 0.94s/it
+Train TTS 226 0.811064 Grad Norm 0.854742 0.95s/it
+Train VC 227 0.786524 Grad Norm 0.513684 0.85s/it
+Train TTS 228 0.771698 Grad Norm 0.431805 0.85s/it
+Train VC 229 0.737035 Grad Norm 0.444147 0.92s/it
+Train TTS 230 0.871084 Grad Norm 0.928563 0.99s/it
+Train VC 231 0.726636 Grad Norm 0.570268 0.96s/it
+Train TTS 232 0.710407 Grad Norm 0.389167 0.89s/it
+Train VC 233 0.708342 Grad Norm 0.489456 1.07s/it
+Train TTS 234 0.712243 Grad Norm 0.396665 0.87s/it
+Train VC 235 0.703379 Grad Norm 0.381456 0.94s/it
+Train TTS 236 0.723987 Grad Norm 0.496578 0.91s/it
+Train VC 237 0.779360 Grad Norm 0.617055 0.93s/it
+Train TTS 238 0.776396 Grad Norm 0.616194 0.85s/it
+Train VC 239 0.666132 Grad Norm 0.273532 0.95s/it
+Train TTS 240 0.757488 Grad Norm 0.511724 1.08s/it
+Train VC 241 0.779595 Grad Norm 0.419592 1.07s/it
+Train TTS 242 0.838486 Grad Norm 0.604270 0.85s/it
+Train VC 243 0.772941 Grad Norm 0.483895 1.11s/it
+Train TTS 244 0.788132 Grad Norm 0.409413 0.90s/it
+Train VC 245 0.704657 Grad Norm 0.437831 1.15s/it
+Train TTS 246 0.679238 Grad Norm 0.274385 0.91s/it
+Train VC 247 0.669207 Grad Norm 0.577702 0.93s/it
+Train TTS 248 0.675647 Grad Norm 0.324449 0.86s/it
+Train VC 249 0.863403 Grad Norm 1.494027 1.05s/it
+Train TTS 250 0.760481 Grad Norm 0.501838 0.92s/it
+Train VC 251 0.777463 Grad Norm 0.737819 1.00s/it
+Train TTS 252 0.693512 Grad Norm 0.400565 1.10s/it
+Train VC 253 0.699774 Grad Norm 0.327650 1.08s/it
+Train TTS 254 0.655141 Grad Norm 0.253969 1.03s/it
+Train VC 255 0.681209 Grad Norm 0.519420 1.18s/it
+Train TTS 256 0.687535 Grad Norm 0.425265 1.10s/it
+Train VC 257 0.662000 Grad Norm 0.283987 0.82s/it
+Train TTS 258 0.660972 Grad Norm 0.334841 0.88s/it
+Epoch: 7
+Train TTS 259 0.704382 Grad Norm 0.365986 1.11s/it
+Train VC 260 0.737079 Grad Norm 0.654139 1.03s/it
+Train TTS 261 0.859699 Grad Norm 0.763967 1.10s/it
+Train VC 262 0.842521 Grad Norm 0.509025 0.95s/it
+Train TTS 263 0.755734 Grad Norm 0.325212 1.01s/it
+Train VC 264 0.688459 Grad Norm 0.550892 1.03s/it
+Train TTS 265 0.669500 Grad Norm 0.308849 1.00s/it
+Train VC 266 0.722683 Grad Norm 0.788645 1.15s/it
+Train TTS 267 0.678068 Grad Norm 0.296140 1.14s/it
+Train VC 268 0.649252 Grad Norm 0.272470 0.87s/it
+Train TTS 269 0.708120 Grad Norm 0.355541 0.96s/it
+Train VC 270 0.749220 Grad Norm 0.532070 1.10s/it
+Train TTS 271 0.757477 Grad Norm 0.475551 1.12s/it
+Train VC 272 0.695365 Grad Norm 0.399196 1.13s/it
+Train TTS 273 0.643828 Grad Norm 0.191384 0.90s/it
+Train VC 274 0.640358 Grad Norm 0.300450 1.22s/it
+Train TTS 275 0.642861 Grad Norm 0.240320 1.06s/it
+Train VC 276 0.701927 Grad Norm 0.446432 1.19s/it
+Train TTS 277 0.698974 Grad Norm 0.402479 1.00s/it
+Train VC 278 0.646856 Grad Norm 0.233539 0.95s/it
+Train TTS 279 0.648395 Grad Norm 0.246229 0.91s/it
+Train VC 280 0.651820 Grad Norm 0.293780 1.01s/it
+Train TTS 281 0.695544 Grad Norm 0.389127 0.89s/it
+Train VC 282 0.671791 Grad Norm 0.278730 0.91s/it
+Train TTS 283 0.703169 Grad Norm 0.264761 0.86s/it
+Train VC 284 0.689417 Grad Norm 0.405372 0.92s/it
+Train TTS 285 0.667449 Grad Norm 0.234750 1.08s/it
+Train VC 286 0.666820 Grad Norm 0.375429 1.05s/it
+Train TTS 287 0.656324 Grad Norm 0.297304 0.99s/it
+Train VC 288 0.650957 Grad Norm 0.314959 1.00s/it
+Train TTS 289 0.650361 Grad Norm 0.257471 0.99s/it
+Train VC 290 0.678633 Grad Norm 0.336900 1.01s/it
+Train TTS 291 0.737524 Grad Norm 0.360702 0.84s/it
+Train VC 292 0.803272 Grad Norm 0.715119 0.91s/it
+Train TTS 293 0.809748 Grad Norm 0.539444 0.94s/it
+Train VC 294 0.889584 Grad Norm 0.933002 0.99s/it
+Train TTS 295 0.687759 Grad Norm 0.317124 0.83s/it
+Epoch: 8
+Train TTS 296 0.647912 Grad Norm 0.285766 1.03s/it
+Train VC 297 0.605465 Grad Norm 0.193862 1.15s/it
+Train TTS 298 0.629767 Grad Norm 0.266411 1.04s/it
+Train VC 299 0.660897 Grad Norm 0.326522 1.00s/it
+Train TTS 300 0.671786 Grad Norm 0.332824 0.95s/it
+Validation loss 300: TTS  1.923612  VC  2.141610
+Saving model and optimizer state at iteration 300 to outdir_emotion_IS/checkpoint_300
+Train VC 301 0.667966 Grad Norm 0.310452 1.06s/it
+Train TTS 302 0.672630 Grad Norm 0.270111 0.98s/it
+Train VC 303 0.690710 Grad Norm 0.378227 0.89s/it
+Train TTS 304 0.729688 Grad Norm 0.436328 0.93s/it
+Train VC 305 0.661662 Grad Norm 0.304556 0.94s/it
+Train TTS 306 0.650738 Grad Norm 0.267900 1.08s/it
+Train VC 307 0.632367 Grad Norm 0.299643 1.18s/it
+Train TTS 308 0.617594 Grad Norm 0.271029 1.09s/it
+Train VC 309 0.644704 Grad Norm 0.390283 0.92s/it
+Train TTS 310 0.618888 Grad Norm 0.242789 0.91s/it
+Train VC 311 0.618339 Grad Norm 0.271463 1.01s/it
+Train TTS 312 0.642796 Grad Norm 0.248201 0.97s/it
+Train VC 313 0.684103 Grad Norm 0.359290 1.08s/it
+Train TTS 314 0.742406 Grad Norm 0.388960 1.12s/it
+Train VC 315 0.746976 Grad Norm 0.460711 1.07s/it
+Train TTS 316 0.777559 Grad Norm 0.398973 1.10s/it
+Train VC 317 0.714743 Grad Norm 0.429401 1.14s/it
+Train TTS 318 0.668965 Grad Norm 0.273982 0.91s/it
+Train VC 319 0.671527 Grad Norm 0.306743 0.96s/it
+Train TTS 320 0.663036 Grad Norm 0.272241 0.83s/it
+Train VC 321 0.604051 Grad Norm 0.225775 0.93s/it
+Train TTS 322 0.620049 Grad Norm 0.171157 1.21s/it
+Train VC 323 0.628863 Grad Norm 0.228038 1.05s/it
+Train TTS 324 0.635627 Grad Norm 0.229319 0.84s/it
+Train VC 325 0.651043 Grad Norm 0.265827 1.07s/it
+Train TTS 326 0.672254 Grad Norm 0.287365 0.94s/it
+Train VC 327 0.703248 Grad Norm 0.315686 1.01s/it
+Train TTS 328 0.702190 Grad Norm 0.310850 1.09s/it
+Train VC 329 0.695512 Grad Norm 0.315880 0.97s/it
+Train TTS 330 0.707211 Grad Norm 0.257806 0.89s/it
+Train VC 331 0.696195 Grad Norm 0.287296 0.91s/it
+Train TTS 332 0.738017 Grad Norm 0.383456 0.77s/it
+Epoch: 9
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1332: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1332: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1320: UserWarning: nn.functional.tanh is deprecated. Use torch.tanh instead.
+  warnings.warn("nn.functional.tanh is deprecated. Use torch.tanh instead.")
+/home/zhoukun/nonparaSeq2seqVC_code-master/pre-train_IS/model/loss.py:111: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  padded = torch.tensor(text_target.data.new(B,1).zero_())
+Train TTS 333 0.653574 Grad Norm 0.259435 0.98s/it
+Train VC 334 0.606996 Grad Norm 0.213617 1.16s/it
+Train TTS 335 0.616160 Grad Norm 0.262777 1.07s/it
+Train VC 336 0.606520 Grad Norm 0.188644 0.92s/it
+Train TTS 337 0.625951 Grad Norm 0.190138 1.01s/it
+Train VC 338 0.660458 Grad Norm 0.402878 1.04s/it
+Train TTS 339 0.637016 Grad Norm 0.252044 0.98s/it
+Train VC 340 0.622357 Grad Norm 0.193509 0.90s/it
+Train TTS 341 0.664093 Grad Norm 0.252678 0.85s/it
+Train VC 342 0.645185 Grad Norm 0.288254 1.01s/it
+Train TTS 343 0.624298 Grad Norm 0.193646 0.85s/it
+Train VC 344 0.597552 Grad Norm 0.183299 0.94s/it
+Train TTS 345 0.632230 Grad Norm 0.222886 1.17s/it
+Train VC 346 0.605504 Grad Norm 0.217490 1.12s/it
+Train TTS 347 0.693447 Grad Norm 0.292013 0.85s/it
+Train VC 348 0.612637 Grad Norm 0.207772 0.94s/it
+Train TTS 349 0.634273 Grad Norm 0.198932 0.95s/it
+Train VC 350 0.620600 Grad Norm 0.223983 1.06s/it
+Train TTS 351 0.639152 Grad Norm 0.229359 1.11s/it
+Train VC 352 0.630216 Grad Norm 0.210618 0.98s/it
+Train TTS 353 0.628453 Grad Norm 0.183730 0.99s/it
+Train VC 354 0.635052 Grad Norm 0.209909 0.86s/it
+Train TTS 355 0.671576 Grad Norm 0.258675 1.07s/it
+Train VC 356 0.657964 Grad Norm 0.277932 0.99s/it
+Train TTS 357 0.656535 Grad Norm 0.309709 0.95s/it
+Train VC 358 0.661465 Grad Norm 0.302437 0.84s/it
+Train TTS 359 0.622052 Grad Norm 0.279935 0.91s/it
+Train VC 360 0.616146 Grad Norm 0.268987 0.96s/it
+Train TTS 361 0.715672 Grad Norm 0.556449 0.95s/it
+Train VC 362 0.637753 Grad Norm 0.241137 0.89s/it
+Train TTS 363 0.682366 Grad Norm 0.464736 0.96s/it
+Train VC 364 0.651511 Grad Norm 0.379568 0.97s/it
+Train TTS 365 0.654148 Grad Norm 0.278130 1.11s/it
+Train VC 366 0.623330 Grad Norm 0.247537 0.94s/it
+Train TTS 367 0.614474 Grad Norm 0.173255 0.96s/it
+Train VC 368 0.605985 Grad Norm 0.215082 1.04s/it
+Train TTS 369 0.626566 Grad Norm 0.188650 0.97s/it
+Epoch: 10
+Train TTS 370 0.633125 Grad Norm 0.195102 1.09s/it
+Train VC 371 0.606445 Grad Norm 0.201842 1.07s/it
+Train TTS 372 0.632492 Grad Norm 0.227323 0.96s/it
+Train VC 373 0.645394 Grad Norm 0.224413 0.91s/it
+Train TTS 374 0.623765 Grad Norm 0.200887 1.12s/it
+Train VC 375 0.607546 Grad Norm 0.199811 1.06s/it
+Train TTS 376 0.627386 Grad Norm 0.203237 1.07s/it
+Train VC 377 0.605529 Grad Norm 0.269261 1.03s/it
+Train TTS 378 0.644664 Grad Norm 0.289849 0.97s/it
+Train VC 379 0.625001 Grad Norm 0.264854 1.06s/it
+Train TTS 380 0.629882 Grad Norm 0.273430 0.86s/it
+Train VC 381 0.598672 Grad Norm 0.239023 1.11s/it
+Train TTS 382 0.616104 Grad Norm 0.202723 0.92s/it
+Train VC 383 0.609124 Grad Norm 0.207968 0.94s/it
+Train TTS 384 0.638758 Grad Norm 0.228848 0.98s/it
+Train VC 385 0.614923 Grad Norm 0.199691 0.91s/it
+Train TTS 386 0.652453 Grad Norm 0.214679 0.91s/it
+Train VC 387 0.644814 Grad Norm 0.301351 0.93s/it
+Train TTS 388 0.631670 Grad Norm 0.238416 1.06s/it
+Train VC 389 0.638557 Grad Norm 0.246901 1.01s/it
+Train TTS 390 0.653151 Grad Norm 0.273798 1.10s/it
+Train VC 391 0.633380 Grad Norm 0.244437 1.08s/it
+Train TTS 392 0.660600 Grad Norm 0.240561 0.95s/it
+Train VC 393 0.633907 Grad Norm 0.276236 1.16s/it
+Train TTS 394 0.635018 Grad Norm 0.335542 0.95s/it
+Train VC 395 0.647666 Grad Norm 0.276858 0.87s/it
+Train TTS 396 0.636236 Grad Norm 0.249989 1.11s/it
+Train VC 397 0.626870 Grad Norm 0.257595 0.94s/it
+Train TTS 398 0.611781 Grad Norm 0.186947 0.99s/it
+Train VC 399 0.636544 Grad Norm 0.314304 1.01s/it
+Train TTS 400 0.651494 Grad Norm 0.312989 0.92s/it
+Validation loss 400: TTS  1.832723  VC  2.052522
+Saving model and optimizer state at iteration 400 to outdir_emotion_IS/checkpoint_400
+Train VC 401 0.630981 Grad Norm 0.291067 1.07s/it
+Train TTS 402 0.646117 Grad Norm 0.296733 0.98s/it
+Train VC 403 0.624728 Grad Norm 0.270272 0.92s/it
+Train TTS 404 0.636259 Grad Norm 0.197099 1.20s/it
+Train VC 405 0.615006 Grad Norm 0.266360 0.78s/it
+Train TTS 406 0.665672 Grad Norm 0.333061 0.95s/it
+Epoch: 11
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1332: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1332: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1320: UserWarning: nn.functional.tanh is deprecated. Use torch.tanh instead.
+  warnings.warn("nn.functional.tanh is deprecated. Use torch.tanh instead.")
+/home/zhoukun/nonparaSeq2seqVC_code-master/pre-train_IS/model/loss.py:111: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  padded = torch.tensor(text_target.data.new(B,1).zero_())
+Train TTS 407 0.642065 Grad Norm 0.221071 1.15s/it
+Train VC 408 0.652664 Grad Norm 0.382942 1.16s/it
+Train TTS 409 0.640684 Grad Norm 0.215586 0.97s/it
+Train VC 410 0.640219 Grad Norm 0.270248 0.98s/it
+Train TTS 411 0.685450 Grad Norm 0.252574 0.91s/it
+Train VC 412 0.669987 Grad Norm 0.249747 1.11s/it
+Train TTS 413 0.677322 Grad Norm 0.243531 0.96s/it
+Train VC 414 0.637372 Grad Norm 0.219685 0.88s/it
+Train TTS 415 0.645335 Grad Norm 0.349584 0.86s/it
+Train VC 416 0.607293 Grad Norm 0.205261 0.85s/it
+Train TTS 417 0.602817 Grad Norm 0.177954 0.92s/it
+Train VC 418 0.628163 Grad Norm 0.309763 0.77s/it
+Train TTS 419 0.610002 Grad Norm 0.188542 0.90s/it
+Train VC 420 0.596905 Grad Norm 0.198883 0.96s/it
+Train TTS 421 0.645739 Grad Norm 0.201649 1.06s/it
+Train VC 422 0.643480 Grad Norm 0.263126 1.09s/it
+Train TTS 423 0.638466 Grad Norm 0.224035 1.06s/it
+Train VC 424 0.643151 Grad Norm 0.378712 0.94s/it
+Train TTS 425 0.635985 Grad Norm 0.213370 0.85s/it
+Train VC 426 0.614713 Grad Norm 0.239677 1.14s/it
+Train TTS 427 0.620851 Grad Norm 0.228554 0.97s/it
+Train VC 428 0.610350 Grad Norm 0.190725 0.91s/it
+Train TTS 429 0.625374 Grad Norm 0.239622 0.91s/it
+Train VC 430 0.586961 Grad Norm 0.187400 1.02s/it
+Train TTS 431 0.626502 Grad Norm 0.197631 0.91s/it
+Train VC 432 0.614134 Grad Norm 0.287339 1.09s/it
+Train TTS 433 0.619485 Grad Norm 0.627672 1.12s/it
+Train VC 434 0.619406 Grad Norm 0.230530 0.91s/it
+Train TTS 435 0.669970 Grad Norm 0.274403 0.90s/it
+Train VC 436 0.645657 Grad Norm 0.257019 0.89s/it
+Train TTS 437 0.663425 Grad Norm 0.398184 1.06s/it
+Train VC 438 0.659470 Grad Norm 0.377452 1.18s/it
+Train TTS 439 0.642894 Grad Norm 0.308961 0.98s/it
+Train VC 440 0.631771 Grad Norm 0.298435 0.99s/it
+Train TTS 441 0.642842 Grad Norm 0.319985 0.96s/it
+Train VC 442 0.625464 Grad Norm 0.247657 0.84s/it
+Train TTS 443 0.613577 Grad Norm 0.239741 0.91s/it
+Epoch: 12
+Train TTS 444 0.612894 Grad Norm 0.277437 1.03s/it
+Train VC 445 0.594299 Grad Norm 0.246291 1.16s/it
+Train TTS 446 0.623854 Grad Norm 0.253623 1.10s/it
+Train VC 447 0.608736 Grad Norm 0.218841 0.96s/it
+Train TTS 448 0.641837 Grad Norm 0.274121 0.86s/it
+Train VC 449 0.648138 Grad Norm 0.277569 0.80s/it
+Train TTS 450 0.614915 Grad Norm 0.216181 1.03s/it
+Train VC 451 0.588012 Grad Norm 0.190887 0.87s/it
+Train TTS 452 0.617212 Grad Norm 0.223066 0.99s/it
+Train VC 453 0.595562 Grad Norm 0.222654 0.95s/it
+Train TTS 454 0.611073 Grad Norm 0.181398 1.04s/it
+Train VC 455 0.590318 Grad Norm 0.176904 1.05s/it
+Train TTS 456 0.627572 Grad Norm 0.294023 1.04s/it
+Train VC 457 0.626429 Grad Norm 0.307785 1.12s/it
+Train TTS 458 0.688190 Grad Norm 0.443730 0.88s/it
+Train VC 459 0.655567 Grad Norm 0.306880 0.97s/it
+Train TTS 460 0.684488 Grad Norm 0.365326 1.14s/it
+Train VC 461 0.651678 Grad Norm 0.345396 1.09s/it
+Train TTS 462 0.641392 Grad Norm 0.249741 0.91s/it
+Train VC 463 0.627661 Grad Norm 0.255147 0.87s/it
+Train TTS 464 0.617399 Grad Norm 0.214948 1.00s/it
+Train VC 465 0.604106 Grad Norm 0.199278 0.94s/it
+Train TTS 466 0.615302 Grad Norm 0.220885 0.88s/it
+Train VC 467 0.592138 Grad Norm 0.219787 0.92s/it
+Train TTS 468 0.624229 Grad Norm 0.209904 0.90s/it
+Train VC 469 0.649920 Grad Norm 0.326042 1.07s/it
+Train TTS 470 0.644657 Grad Norm 0.238163 1.08s/it
+Train VC 471 0.618012 Grad Norm 0.213187 0.96s/it
+Train TTS 472 0.655268 Grad Norm 0.275092 0.83s/it
+Train VC 473 0.616831 Grad Norm 0.239688 0.96s/it
+Train TTS 474 0.632959 Grad Norm 0.232883 0.94s/it
+Train VC 475 0.615092 Grad Norm 0.202854 0.99s/it
+Train TTS 476 0.642238 Grad Norm 0.249023 0.95s/it
+Train VC 477 0.652984 Grad Norm 0.255446 0.88s/it
+Train TTS 478 0.623209 Grad Norm 0.277669 1.02s/it
+Train VC 479 0.609806 Grad Norm 0.224535 0.99s/it
+Train TTS 480 0.635714 Grad Norm 0.277010 1.10s/it
+Epoch: 13
+Train TTS 481 0.654869 Grad Norm 0.244939 1.15s/it
+Train VC 482 0.638340 Grad Norm 0.245739 0.89s/it
+Train TTS 483 0.685450 Grad Norm 0.309026 1.12s/it
+Train VC 484 0.692667 Grad Norm 0.298845 0.94s/it
+Train TTS 485 0.656754 Grad Norm 0.274216 0.97s/it
+Train VC 486 0.619232 Grad Norm 0.232637 0.90s/it
+Train TTS 487 0.654783 Grad Norm 0.266854 0.92s/it
+Train VC 488 0.596530 Grad Norm 0.184127 0.84s/it
+Train TTS 489 0.645733 Grad Norm 0.270263 1.07s/it
+Train VC 490 0.617389 Grad Norm 0.218612 1.05s/it
+Train TTS 491 0.612432 Grad Norm 0.208571 0.87s/it
+Train VC 492 0.616623 Grad Norm 0.224228 0.84s/it
+Train TTS 493 0.671403 Grad Norm 0.284388 1.06s/it
+Train VC 494 0.649718 Grad Norm 0.304099 0.96s/it
+Train TTS 495 0.629310 Grad Norm 0.229943 0.85s/it
+Train VC 496 0.681037 Grad Norm 0.298374 1.07s/it
+Train TTS 497 0.649175 Grad Norm 0.229187 0.92s/it
+Train VC 498 0.598031 Grad Norm 0.179634 0.94s/it
+Train TTS 499 0.617352 Grad Norm 0.199566 0.90s/it
+Train VC 500 0.624220 Grad Norm 0.288800 1.00s/it
+Validation loss 500: TTS  1.812628  VC  2.010083
+Saving model and optimizer state at iteration 500 to outdir_emotion_IS/checkpoint_500
+Train TTS 501 0.631361 Grad Norm 0.271107 1.24s/it
+Train VC 502 0.631104 Grad Norm 0.260457 0.92s/it
+Train TTS 503 0.649473 Grad Norm 0.275100 0.93s/it
+Train VC 504 0.658695 Grad Norm 0.295218 0.88s/it
+Train TTS 505 0.666845 Grad Norm 0.290399 1.02s/it
+Train VC 506 0.647529 Grad Norm 0.288828 1.12s/it
+Train TTS 507 0.643894 Grad Norm 0.235720 1.05s/it
+Train VC 508 0.620506 Grad Norm 0.255775 1.05s/it
+Train TTS 509 0.708161 Grad Norm 0.345340 0.84s/it
+Train VC 510 0.633101 Grad Norm 0.314741 1.10s/it
+Train TTS 511 0.674667 Grad Norm 0.392977 1.08s/it
+Train VC 512 0.667231 Grad Norm 0.365366 0.99s/it
+Train TTS 513 0.681917 Grad Norm 0.404310 1.05s/it
+Train VC 514 0.644186 Grad Norm 0.287741 1.08s/it
+Train TTS 515 0.671034 Grad Norm 0.264976 0.91s/it
+Train VC 516 0.635894 Grad Norm 0.266728 0.98s/it
+Train TTS 517 0.649944 Grad Norm 0.259423 0.83s/it
+Epoch: 14
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1332: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1332: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1320: UserWarning: nn.functional.tanh is deprecated. Use torch.tanh instead.
+  warnings.warn("nn.functional.tanh is deprecated. Use torch.tanh instead.")
+/home/zhoukun/nonparaSeq2seqVC_code-master/pre-train_IS/model/loss.py:111: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  padded = torch.tensor(text_target.data.new(B,1).zero_())
+Train TTS 518 0.631986 Grad Norm 0.228809 1.09s/it
+Train VC 519 0.619749 Grad Norm 0.218507 0.95s/it
+Train TTS 520 0.648800 Grad Norm 0.255813 1.13s/it
+Train VC 521 0.625428 Grad Norm 0.226182 0.99s/it
+Train TTS 522 0.614061 Grad Norm 0.189278 0.91s/it
+Train VC 523 0.633483 Grad Norm 0.232427 1.17s/it
+Train TTS 524 0.609321 Grad Norm 0.216826 0.94s/it
+Train VC 525 0.612933 Grad Norm 0.207854 0.95s/it
+Train TTS 526 0.637591 Grad Norm 0.190476 1.01s/it
+Train VC 527 0.599864 Grad Norm 0.208229 0.94s/it
+Train TTS 528 0.664578 Grad Norm 0.280124 1.09s/it
+Train VC 529 0.600844 Grad Norm 0.179493 0.93s/it
+Train TTS 530 0.608623 Grad Norm 0.179433 0.86s/it
+Train VC 531 0.616924 Grad Norm 0.211182 1.07s/it
+Train TTS 532 0.591115 Grad Norm 0.178030 0.89s/it
+Train VC 533 0.592801 Grad Norm 0.189124 1.14s/it
+Train TTS 534 0.622602 Grad Norm 0.206096 1.13s/it
+Train VC 535 0.578711 Grad Norm 0.179711 0.95s/it
+Train TTS 536 0.597946 Grad Norm 0.226362 1.07s/it
+Train VC 537 0.590369 Grad Norm 0.176077 0.97s/it
+Train TTS 538 0.597125 Grad Norm 0.206640 1.09s/it
+Train VC 539 0.599017 Grad Norm 0.273419 1.04s/it
+Train TTS 540 0.640462 Grad Norm 0.319207 0.95s/it
+Train VC 541 0.618385 Grad Norm 0.307562 1.22s/it
+Train TTS 542 0.662775 Grad Norm 0.579750 1.01s/it
+Train VC 543 0.634575 Grad Norm 0.369918 0.99s/it
+Train TTS 544 0.666884 Grad Norm 0.340132 0.90s/it
+Train VC 545 0.656582 Grad Norm 0.347092 1.00s/it
+Train TTS 546 0.620417 Grad Norm 0.247416 1.03s/it
+Train VC 547 0.622585 Grad Norm 0.286460 0.90s/it
+Train TTS 548 0.605174 Grad Norm 0.210353 1.09s/it
+Train VC 549 0.597680 Grad Norm 0.199472 0.97s/it
+Train TTS 550 0.623677 Grad Norm 0.227351 0.96s/it
+Train VC 551 0.593658 Grad Norm 0.158142 0.92s/it
+Train TTS 552 0.611375 Grad Norm 0.189988 0.93s/it
+Train VC 553 0.598540 Grad Norm 0.177034 0.82s/it
+Train TTS 554 0.599752 Grad Norm 0.165085 0.81s/it
+Epoch: 15
+Train TTS 555 0.608526 Grad Norm 0.185778 1.18s/it
+Train VC 556 0.582697 Grad Norm 0.167231 0.92s/it
+Train TTS 557 0.597165 Grad Norm 0.193448 0.90s/it
+Train VC 558 0.586423 Grad Norm 0.165046 0.94s/it
+Train TTS 559 0.608814 Grad Norm 0.232323 0.98s/it
+Train VC 560 0.590954 Grad Norm 0.182578 0.87s/it
+Train TTS 561 0.632888 Grad Norm 0.201577 1.07s/it
+Train VC 562 0.592213 Grad Norm 0.163464 0.91s/it
+Train TTS 563 0.598368 Grad Norm 0.213283 0.90s/it
+Train VC 564 0.585213 Grad Norm 0.180438 0.94s/it
+Train TTS 565 0.606023 Grad Norm 0.186113 0.98s/it
+Train VC 566 0.611216 Grad Norm 0.234135 1.06s/it
+Train TTS 567 0.633100 Grad Norm 0.266846 1.07s/it
+Train VC 568 0.597971 Grad Norm 0.190504 0.87s/it
+Train TTS 569 0.609100 Grad Norm 0.226795 0.90s/it
+Train VC 570 0.582224 Grad Norm 0.187966 1.00s/it
+Train TTS 571 0.602709 Grad Norm 0.208341 1.10s/it
+Train VC 572 0.584157 Grad Norm 0.203240 1.08s/it
+Train TTS 573 0.610431 Grad Norm 0.216694 0.87s/it
+Train VC 574 0.600591 Grad Norm 0.247324 1.08s/it
+Train TTS 575 0.595612 Grad Norm 0.191189 0.96s/it
+Train VC 576 0.589907 Grad Norm 0.193758 0.95s/it
+Train TTS 577 0.585579 Grad Norm 0.203311 1.13s/it
+Train VC 578 0.572046 Grad Norm 0.172777 0.98s/it
+Train TTS 579 0.608630 Grad Norm 0.229366 0.98s/it
+Train VC 580 0.594879 Grad Norm 0.191619 0.98s/it
+Train TTS 581 0.604991 Grad Norm 0.233835 1.16s/it
+Train VC 582 0.618052 Grad Norm 0.234228 1.19s/it
+Train TTS 583 0.597734 Grad Norm 0.190282 0.83s/it
+Train VC 584 0.606529 Grad Norm 0.233723 0.97s/it
+Train TTS 585 0.625374 Grad Norm 0.214400 0.93s/it
+Train VC 586 0.621594 Grad Norm 0.239987 0.92s/it
+Train TTS 587 0.655122 Grad Norm 0.282600 1.11s/it
+Train VC 588 0.606243 Grad Norm 0.258355 1.02s/it
+Train TTS 589 0.606780 Grad Norm 0.199560 1.05s/it
+Train VC 590 0.568443 Grad Norm 0.172608 0.90s/it
+Train TTS 591 0.596948 Grad Norm 0.184065 0.79s/it
+Epoch: 16
+Train TTS 592 0.592195 Grad Norm 0.170491 1.05s/it
+Train VC 593 0.583609 Grad Norm 0.175456 1.02s/it
+Train TTS 594 0.596833 Grad Norm 0.210060 1.12s/it
+Train VC 595 0.588560 Grad Norm 0.202161 1.00s/it
+Train TTS 596 0.594433 Grad Norm 0.170871 0.98s/it
+Train VC 597 0.593850 Grad Norm 0.183329 0.95s/it
+Train TTS 598 0.613180 Grad Norm 0.277397 0.91s/it
+Train VC 599 0.582043 Grad Norm 0.169799 1.06s/it
+Train TTS 600 0.612705 Grad Norm 0.188218 0.84s/it
+Validation loss 600: TTS  1.823911  VC  2.048332
+Saving model and optimizer state at iteration 600 to outdir_emotion_IS/checkpoint_600
+Train VC 601 0.574208 Grad Norm 0.204175 1.09s/it
+Train TTS 602 0.583045 Grad Norm 0.195901 1.11s/it
+Train VC 603 0.574888 Grad Norm 0.186612 1.05s/it
+Train TTS 604 0.594782 Grad Norm 0.169507 0.95s/it
+Train VC 605 0.581690 Grad Norm 0.175117 1.09s/it
+Train TTS 606 0.591076 Grad Norm 0.177581 0.93s/it
+Train VC 607 0.582386 Grad Norm 0.192780 0.92s/it
+Train TTS 608 0.588956 Grad Norm 0.194162 1.18s/it
+Train VC 609 0.585504 Grad Norm 0.178282 1.17s/it
+Train TTS 610 0.594370 Grad Norm 0.221604 1.10s/it
+Train VC 611 0.597091 Grad Norm 0.183173 0.98s/it
+Train TTS 612 0.612059 Grad Norm 0.231835 0.95s/it
+Train VC 613 0.586861 Grad Norm 0.180137 0.95s/it
+Train TTS 614 0.631859 Grad Norm 0.249836 0.86s/it
+Train VC 615 0.593978 Grad Norm 0.205003 1.02s/it
+Train TTS 616 0.595199 Grad Norm 0.183661 1.09s/it
+Train VC 617 0.585853 Grad Norm 0.185283 0.89s/it
+Train TTS 618 0.604432 Grad Norm 0.212434 0.88s/it
+Train VC 619 0.581514 Grad Norm 0.191149 1.00s/it
+Train TTS 620 0.603419 Grad Norm 0.188355 0.88s/it
+Train VC 621 0.574933 Grad Norm 0.293814 0.92s/it
+Train TTS 622 0.610927 Grad Norm 0.215296 0.77s/it
+Train VC 623 0.601365 Grad Norm 0.186413 0.91s/it
+Train TTS 624 0.633009 Grad Norm 0.250801 0.91s/it
+Train VC 625 0.601120 Grad Norm 0.211236 0.80s/it
+Train TTS 626 0.656312 Grad Norm 0.245969 1.11s/it
+Train VC 627 0.605639 Grad Norm 0.202922 0.94s/it
+Train TTS 628 0.642803 Grad Norm 0.263984 0.99s/it
+Epoch: 17
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1332: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1332: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1320: UserWarning: nn.functional.tanh is deprecated. Use torch.tanh instead.
+  warnings.warn("nn.functional.tanh is deprecated. Use torch.tanh instead.")
+/home/zhoukun/nonparaSeq2seqVC_code-master/pre-train_IS/model/loss.py:111: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  padded = torch.tensor(text_target.data.new(B,1).zero_())
+Train TTS 629 0.616309 Grad Norm 0.215589 0.98s/it
+Train VC 630 0.599071 Grad Norm 0.196483 0.99s/it
+Train TTS 631 0.612766 Grad Norm 0.232318 1.10s/it
+Train VC 632 0.585574 Grad Norm 0.202350 1.08s/it
+Train TTS 633 0.594527 Grad Norm 0.183013 1.14s/it
+Train VC 634 0.575208 Grad Norm 0.163101 0.89s/it
+Train TTS 635 0.588579 Grad Norm 0.164300 0.90s/it
+Train VC 636 0.584584 Grad Norm 0.252457 0.93s/it
+Train TTS 637 0.602050 Grad Norm 0.195912 1.02s/it
+Train VC 638 0.590491 Grad Norm 0.221862 0.89s/it
+Train TTS 639 0.594875 Grad Norm 0.208127 0.84s/it
+Train VC 640 0.597045 Grad Norm 0.207789 0.91s/it
+Train TTS 641 0.618374 Grad Norm 0.229662 0.88s/it
+Train VC 642 0.579833 Grad Norm 0.195211 0.97s/it
+Train TTS 643 0.590178 Grad Norm 0.189484 0.98s/it
+Train VC 644 0.594457 Grad Norm 0.210806 1.17s/it
+Train TTS 645 0.614588 Grad Norm 0.201789 1.09s/it
+Train VC 646 0.581644 Grad Norm 0.177648 0.87s/it
+Train TTS 647 0.617208 Grad Norm 0.244282 0.82s/it
+Train VC 648 0.590831 Grad Norm 0.218382 0.99s/it
+Train TTS 649 0.603857 Grad Norm 0.167406 0.93s/it
+Train VC 650 0.583082 Grad Norm 0.200799 1.07s/it
+Train TTS 651 0.609133 Grad Norm 0.236721 1.12s/it
+Train VC 652 0.588341 Grad Norm 0.224651 0.99s/it
+Train TTS 653 0.593864 Grad Norm 0.172640 1.07s/it
+Train VC 654 0.597457 Grad Norm 0.234741 1.15s/it
+Train TTS 655 0.597361 Grad Norm 0.275162 0.99s/it
+Train VC 656 0.594784 Grad Norm 0.190679 0.99s/it
+Train TTS 657 0.607945 Grad Norm 0.195034 0.97s/it
+Train VC 658 0.577102 Grad Norm 0.182878 0.85s/it
+Train TTS 659 0.610631 Grad Norm 0.234273 1.09s/it
+Train VC 660 0.588769 Grad Norm 0.196729 0.79s/it
+Train TTS 661 0.627313 Grad Norm 0.231500 0.86s/it
+Train VC 662 0.575327 Grad Norm 0.168336 0.93s/it
+Train TTS 663 0.594564 Grad Norm 0.177760 0.92s/it
+Train VC 664 0.595333 Grad Norm 0.208354 0.81s/it
+Train TTS 665 0.596036 Grad Norm 0.207992 0.77s/it
+Epoch: 18
+Train TTS 666 0.591345 Grad Norm 0.205681 0.99s/it
+Train VC 667 0.570481 Grad Norm 0.190319 1.06s/it
+Train TTS 668 0.583681 Grad Norm 0.221510 1.09s/it
+Train VC 669 0.590334 Grad Norm 0.201997 0.93s/it
+Train TTS 670 0.604434 Grad Norm 0.215899 1.18s/it
+Train VC 671 0.629806 Grad Norm 0.299566 0.83s/it
+Train TTS 672 0.609505 Grad Norm 0.207237 0.86s/it
+Train VC 673 0.589328 Grad Norm 0.214422 0.97s/it
+Train TTS 674 0.592522 Grad Norm 0.202516 1.13s/it
+Train VC 675 0.583320 Grad Norm 0.264691 1.02s/it
+Train TTS 676 0.590516 Grad Norm 0.213401 1.17s/it
+Train VC 677 0.568573 Grad Norm 0.177689 1.07s/it
+Train TTS 678 0.597520 Grad Norm 0.245005 0.90s/it
+Train VC 679 0.576651 Grad Norm 0.192343 0.90s/it
+Train TTS 680 0.604374 Grad Norm 0.245995 0.98s/it
+Train VC 681 0.575188 Grad Norm 0.217420 0.97s/it
+Train TTS 682 0.611686 Grad Norm 0.226386 0.90s/it
+Train VC 683 0.588396 Grad Norm 0.239496 0.94s/it
+Train TTS 684 0.606252 Grad Norm 0.217588 0.94s/it
+Train VC 685 0.578463 Grad Norm 0.217950 0.96s/it
+Train TTS 686 0.588723 Grad Norm 0.201543 1.09s/it
+Train VC 687 0.578233 Grad Norm 0.191087 0.96s/it
+Train TTS 688 0.624377 Grad Norm 0.219308 0.91s/it
+Train VC 689 0.603438 Grad Norm 0.222037 1.03s/it
+Train TTS 690 0.597070 Grad Norm 0.211985 1.05s/it
+Train VC 691 0.620698 Grad Norm 0.315467 0.97s/it
+Train TTS 692 0.596492 Grad Norm 0.200126 1.02s/it
+Train VC 693 0.591538 Grad Norm 0.207300 0.94s/it
+Train TTS 694 0.611286 Grad Norm 0.210214 0.94s/it
+Train VC 695 0.620433 Grad Norm 0.239128 0.88s/it
+Train TTS 696 0.626675 Grad Norm 0.225095 0.90s/it
+Train VC 697 0.599552 Grad Norm 0.239336 1.11s/it
+Train TTS 698 0.625175 Grad Norm 0.219771 0.80s/it
+Train VC 699 0.601666 Grad Norm 0.209014 1.07s/it
+Train TTS 700 0.620932 Grad Norm 0.197820 0.95s/it
+Validation loss 700: TTS  1.837801  VC  2.072460
+Saving model and optimizer state at iteration 700 to outdir_emotion_IS/checkpoint_700
+Train VC 701 0.590495 Grad Norm 0.209697 1.06s/it
+Train TTS 702 0.600705 Grad Norm 0.196372 0.89s/it
+Epoch: 19
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1332: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1332: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1320: UserWarning: nn.functional.tanh is deprecated. Use torch.tanh instead.
+  warnings.warn("nn.functional.tanh is deprecated. Use torch.tanh instead.")
+/home/zhoukun/nonparaSeq2seqVC_code-master/pre-train_IS/model/loss.py:111: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  padded = torch.tensor(text_target.data.new(B,1).zero_())
+Train TTS 703 0.593162 Grad Norm 0.204936 1.00s/it
+Train VC 704 0.587546 Grad Norm 0.188073 0.91s/it
+Train TTS 705 0.599540 Grad Norm 0.225600 0.90s/it
+Train VC 706 0.600220 Grad Norm 0.233812 0.98s/it
+Train TTS 707 0.609352 Grad Norm 0.306051 0.91s/it
+Train VC 708 0.620197 Grad Norm 0.334240 0.90s/it
+Train TTS 709 0.605157 Grad Norm 0.205044 0.95s/it
+Train VC 710 0.594589 Grad Norm 0.187424 1.00s/it
+Train TTS 711 0.602258 Grad Norm 0.197176 0.99s/it
+Train VC 712 0.588026 Grad Norm 0.226013 0.85s/it
+Train TTS 713 0.619945 Grad Norm 0.220409 0.86s/it
+Train VC 714 0.594030 Grad Norm 0.213667 0.84s/it
+Train TTS 715 0.604097 Grad Norm 0.180192 0.96s/it
+Train VC 716 0.591256 Grad Norm 0.349532 1.08s/it
+Train TTS 717 0.603316 Grad Norm 0.219749 1.18s/it
+Train VC 718 0.571298 Grad Norm 0.191214 1.13s/it
+Train TTS 719 0.599052 Grad Norm 0.228828 1.01s/it
+Train VC 720 0.592846 Grad Norm 0.200672 0.95s/it
+Train TTS 721 0.601150 Grad Norm 0.207168 0.96s/it
+Train VC 722 0.584056 Grad Norm 0.210279 1.07s/it
+Train TTS 723 0.610699 Grad Norm 0.216039 0.84s/it
+Train VC 724 0.604897 Grad Norm 0.213678 1.05s/it
+Train TTS 725 0.613404 Grad Norm 0.244671 0.95s/it
+Train VC 726 0.593026 Grad Norm 0.225598 1.16s/it
+Train TTS 727 0.603119 Grad Norm 0.249332 1.07s/it
+Train VC 728 0.586181 Grad Norm 0.244736 0.98s/it
+Train TTS 729 0.604778 Grad Norm 0.204155 1.06s/it
+Train VC 730 0.586313 Grad Norm 0.256538 0.92s/it
+Train TTS 731 0.604298 Grad Norm 0.235963 0.95s/it
+Train VC 732 0.595654 Grad Norm 0.281209 1.03s/it
+Train TTS 733 0.609845 Grad Norm 0.246704 1.12s/it
+Train VC 734 0.665012 Grad Norm 0.380995 0.86s/it
+Train TTS 735 0.601240 Grad Norm 0.910306 1.04s/it
+Train VC 736 0.612670 Grad Norm 0.234014 0.92s/it
+Train TTS 737 0.603698 Grad Norm 0.300019 0.98s/it
+Train VC 738 0.593308 Grad Norm 0.184183 0.86s/it
+Train TTS 739 0.594896 Grad Norm 0.261850 0.87s/it
+Epoch: 20
+Train TTS 740 0.584737 Grad Norm 0.188465 1.08s/it
+Train VC 741 0.594465 Grad Norm 0.218297 0.89s/it
+Train TTS 742 0.605964 Grad Norm 0.297297 0.93s/it
+Train VC 743 0.583100 Grad Norm 0.186373 0.94s/it
+Train TTS 744 0.622892 Grad Norm 0.251526 1.07s/it
+Train VC 745 0.590471 Grad Norm 0.228794 0.92s/it
+Train TTS 746 0.604490 Grad Norm 0.234531 0.87s/it
+Train VC 747 0.609123 Grad Norm 0.228599 0.94s/it
+Train TTS 748 0.602370 Grad Norm 0.246743 1.07s/it
+Train VC 749 0.586371 Grad Norm 0.222765 0.99s/it
+Train TTS 750 0.609576 Grad Norm 0.257569 1.06s/it
+Train VC 751 0.587942 Grad Norm 0.228075 1.13s/it
+Train TTS 752 0.605715 Grad Norm 0.232062 1.10s/it
+Train VC 753 0.580789 Grad Norm 0.190084 0.91s/it
+Train TTS 754 0.601618 Grad Norm 0.279006 0.90s/it
+Train VC 755 0.602374 Grad Norm 0.221876 1.10s/it
+Train TTS 756 0.615543 Grad Norm 0.221564 1.19s/it
+Train VC 757 0.581890 Grad Norm 0.252109 0.96s/it
+Train TTS 758 0.603374 Grad Norm 0.207714 1.11s/it
+Train VC 759 0.590040 Grad Norm 0.287301 0.95s/it
+Train TTS 760 0.594094 Grad Norm 0.224677 1.02s/it
+Train VC 761 0.595153 Grad Norm 0.203502 0.88s/it
+Train TTS 762 0.616271 Grad Norm 0.257562 1.00s/it
+Train VC 763 0.606380 Grad Norm 0.278696 1.01s/it
+Train TTS 764 0.610582 Grad Norm 0.233769 1.18s/it
+Train VC 765 0.590290 Grad Norm 0.182890 1.06s/it
+Train TTS 766 0.615662 Grad Norm 0.260466 1.08s/it
+Train VC 767 0.584350 Grad Norm 0.198862 0.97s/it
+Train TTS 768 0.612215 Grad Norm 0.226520 0.94s/it
+Train VC 769 0.599279 Grad Norm 0.211513 0.97s/it
+Train TTS 770 0.603868 Grad Norm 0.238619 1.09s/it
+Train VC 771 0.681931 Grad Norm 0.531990 0.91s/it
+Train TTS 772 0.619456 Grad Norm 0.266526 1.07s/it
+Train VC 773 0.605763 Grad Norm 0.249587 0.97s/it
+Train TTS 774 0.637774 Grad Norm 0.331073 1.10s/it
+Train VC 775 0.640032 Grad Norm 0.272726 0.86s/it
+Train TTS 776 0.618256 Grad Norm 0.274079 0.96s/it
+Epoch: 21
+Train TTS 777 0.624475 Grad Norm 0.316589 1.05s/it
+Train VC 778 0.614944 Grad Norm 0.262583 0.99s/it
+Train TTS 779 0.620129 Grad Norm 0.298319 1.20s/it
+Train VC 780 0.604228 Grad Norm 0.213360 1.05s/it
+Train TTS 781 0.600149 Grad Norm 0.197690 1.11s/it
+Train VC 782 0.600837 Grad Norm 0.281816 0.81s/it
+Train TTS 783 0.579267 Grad Norm 0.255850 1.12s/it
+Train VC 784 0.657856 Grad Norm 0.319083 0.86s/it
+Train TTS 785 0.584588 Grad Norm 0.184587 0.96s/it
+Train VC 786 0.571366 Grad Norm 0.140116 0.98s/it
+Train TTS 787 0.600011 Grad Norm 0.199145 0.94s/it
+Train VC 788 0.594914 Grad Norm 0.245320 0.97s/it
+Train TTS 789 0.594871 Grad Norm 0.202141 1.10s/it
+Train VC 790 0.577733 Grad Norm 0.166256 1.12s/it
+Train TTS 791 0.596702 Grad Norm 0.271957 0.87s/it
+Train VC 792 0.583696 Grad Norm 0.229586 0.94s/it
+Train TTS 793 0.607494 Grad Norm 0.305566 1.00s/it
+Train VC 794 0.587058 Grad Norm 0.213260 1.02s/it
+Train TTS 795 0.606527 Grad Norm 0.246015 0.95s/it
+Train VC 796 0.596360 Grad Norm 0.210019 0.91s/it
+Train TTS 797 0.608174 Grad Norm 0.211289 0.91s/it
+Train VC 798 0.595839 Grad Norm 0.264158 1.09s/it
+Train TTS 799 0.600577 Grad Norm 0.225038 1.01s/it
+Train VC 800 0.585742 Grad Norm 0.221884 0.99s/it
+Validation loss 800: TTS  1.835364  VC  2.075748
+Saving model and optimizer state at iteration 800 to outdir_emotion_IS/checkpoint_800
+Train TTS 801 0.602988 Grad Norm 0.273131 1.00s/it
+Train VC 802 0.581904 Grad Norm 0.186320 0.97s/it
+Train TTS 803 0.590932 Grad Norm 0.219798 0.88s/it
+Train VC 804 0.578675 Grad Norm 0.194333 1.14s/it
+Train TTS 805 0.603058 Grad Norm 0.217724 0.90s/it
+Train VC 806 0.584017 Grad Norm 0.162299 1.18s/it
+Train TTS 807 0.602635 Grad Norm 0.194316 0.97s/it
+Train VC 808 0.580608 Grad Norm 0.205927 1.10s/it
+Train TTS 809 0.597566 Grad Norm 0.213275 0.92s/it
+Train VC 810 0.579537 Grad Norm 0.163175 1.00s/it
+Train TTS 811 0.610543 Grad Norm 0.197703 1.11s/it
+Train VC 812 0.595557 Grad Norm 0.203642 0.99s/it
+Train TTS 813 0.605768 Grad Norm 0.199880 0.85s/it
+Epoch: 22
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1332: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1332: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1320: UserWarning: nn.functional.tanh is deprecated. Use torch.tanh instead.
+  warnings.warn("nn.functional.tanh is deprecated. Use torch.tanh instead.")
+/home/zhoukun/nonparaSeq2seqVC_code-master/pre-train_IS/model/loss.py:111: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  padded = torch.tensor(text_target.data.new(B,1).zero_())
+Train TTS 814 0.592132 Grad Norm 0.183402 1.01s/it
+Train VC 815 0.588516 Grad Norm 0.186924 0.95s/it
+Train TTS 816 0.595087 Grad Norm 0.245350 1.08s/it
+Train VC 817 0.579415 Grad Norm 0.155489 0.91s/it
+Train TTS 818 0.591757 Grad Norm 0.206582 0.95s/it
+Train VC 819 0.583198 Grad Norm 0.235542 1.02s/it
+Train TTS 820 0.589989 Grad Norm 0.179899 1.08s/it
+Train VC 821 0.574057 Grad Norm 0.181238 1.12s/it
+Train TTS 822 0.600931 Grad Norm 0.209073 1.05s/it
+Train VC 823 0.574764 Grad Norm 0.179531 1.03s/it
+Train TTS 824 0.588382 Grad Norm 0.172623 1.19s/it
+Train VC 825 0.573560 Grad Norm 0.191320 1.07s/it
+Train TTS 826 0.641711 Grad Norm 0.355523 0.81s/it
+Train VC 827 0.566881 Grad Norm 0.153930 1.01s/it
+Train TTS 828 0.591505 Grad Norm 0.281483 0.88s/it
+Train VC 829 0.572071 Grad Norm 0.173017 0.96s/it
+Train TTS 830 0.598810 Grad Norm 0.215405 0.93s/it
+Train VC 831 0.578308 Grad Norm 0.200297 0.91s/it
+Train TTS 832 0.600498 Grad Norm 0.254345 1.09s/it
+Train VC 833 0.579557 Grad Norm 0.193357 1.08s/it
+Train TTS 834 0.602412 Grad Norm 0.227035 0.88s/it
+Train VC 835 0.574913 Grad Norm 0.173544 0.95s/it
+Train TTS 836 0.587968 Grad Norm 0.188146 0.97s/it
+Train VC 837 0.584598 Grad Norm 0.207548 0.89s/it
+Train TTS 838 0.600162 Grad Norm 0.248355 0.99s/it
+Train VC 839 0.583498 Grad Norm 0.181763 0.92s/it
+Train TTS 840 0.592404 Grad Norm 0.200720 1.06s/it
+Train VC 841 0.589204 Grad Norm 0.259724 0.98s/it
+Train TTS 842 0.587825 Grad Norm 0.174288 0.90s/it
+Train VC 843 0.583726 Grad Norm 0.194692 1.16s/it
+Train TTS 844 0.585905 Grad Norm 0.206363 0.93s/it
+Train VC 845 0.569562 Grad Norm 0.158332 0.81s/it
+Train TTS 846 0.588689 Grad Norm 0.211394 1.13s/it
+Train VC 847 0.591594 Grad Norm 0.192892 1.05s/it
+Train TTS 848 0.603484 Grad Norm 0.561113 0.94s/it
+Train VC 849 0.574174 Grad Norm 0.177624 1.03s/it
+Train TTS 850 0.598079 Grad Norm 0.193838 1.04s/it
+Epoch: 23
+Train TTS 851 0.587691 Grad Norm 0.215748 1.11s/it
+Train VC 852 0.574479 Grad Norm 0.239152 1.17s/it
+Train TTS 853 0.594136 Grad Norm 0.197676 0.93s/it
+Train VC 854 0.574137 Grad Norm 0.155439 0.99s/it
+Train TTS 855 0.585764 Grad Norm 0.199244 1.04s/it
+Train VC 856 0.581731 Grad Norm 0.203577 0.90s/it
+Train TTS 857 0.580517 Grad Norm 0.188132 1.09s/it
+Train VC 858 0.578624 Grad Norm 0.221905 1.07s/it
+Train TTS 859 0.595371 Grad Norm 0.216252 0.96s/it
+Train VC 860 0.592401 Grad Norm 0.199945 0.93s/it
+Train TTS 861 0.596700 Grad Norm 0.217670 1.08s/it
+Train VC 862 0.572240 Grad Norm 0.192630 0.99s/it
+Train TTS 863 0.605847 Grad Norm 0.212746 1.08s/it
+Train VC 864 0.575897 Grad Norm 0.191870 0.83s/it
+Train TTS 865 0.603563 Grad Norm 0.261328 0.91s/it
+Train VC 866 0.588577 Grad Norm 0.203784 0.87s/it
+Train TTS 867 0.608556 Grad Norm 0.289038 1.04s/it
+Train VC 868 0.592529 Grad Norm 0.253988 0.95s/it
+Train TTS 869 0.587845 Grad Norm 0.188890 0.90s/it
+Train VC 870 0.575682 Grad Norm 0.300784 0.89s/it
+Train TTS 871 0.596941 Grad Norm 0.274454 1.11s/it
+Train VC 872 0.585914 Grad Norm 0.243870 0.93s/it
+Train TTS 873 0.596366 Grad Norm 0.224441 0.94s/it
+Train VC 874 0.590024 Grad Norm 0.232892 0.90s/it
+Train TTS 875 0.591149 Grad Norm 0.247698 0.92s/it
+Train VC 876 0.584669 Grad Norm 0.218166 1.18s/it
+Train TTS 877 0.590592 Grad Norm 0.215145 1.06s/it
+Train VC 878 0.575360 Grad Norm 0.175899 0.96s/it
+Train TTS 879 0.588110 Grad Norm 0.207417 1.13s/it
+Train VC 880 0.573195 Grad Norm 0.202799 0.99s/it
+Train TTS 881 0.587672 Grad Norm 0.213779 1.10s/it
+Train VC 882 0.576109 Grad Norm 0.204902 0.94s/it
+Train TTS 883 0.598386 Grad Norm 0.224672 0.96s/it
+Train VC 884 0.588604 Grad Norm 0.225488 0.88s/it
+Train TTS 885 0.595993 Grad Norm 0.208449 0.93s/it
+Train VC 886 0.583114 Grad Norm 0.191366 0.97s/it
+Train TTS 887 0.598455 Grad Norm 0.259536 0.99s/it
+Epoch: 24
+Train TTS 888 0.605396 Grad Norm 0.233928 1.02s/it
+Train VC 889 0.572076 Grad Norm 0.206062 1.06s/it
+Train TTS 890 0.591952 Grad Norm 0.227571 0.90s/it
+Train VC 891 0.590015 Grad Norm 0.210285 1.08s/it
+Train TTS 892 0.584086 Grad Norm 0.190501 1.04s/it
+Train VC 893 0.582657 Grad Norm 0.185239 1.11s/it
+Train TTS 894 0.576350 Grad Norm 0.209607 0.91s/it
+Train VC 895 0.568564 Grad Norm 0.182464 1.05s/it
+Train TTS 896 0.587931 Grad Norm 0.209926 0.83s/it
+Train VC 897 0.576971 Grad Norm 0.181590 0.91s/it
+Train TTS 898 0.582157 Grad Norm 0.211908 0.96s/it
+Train VC 899 0.578532 Grad Norm 0.196285 0.93s/it
+Train TTS 900 0.608789 Grad Norm 0.220780 1.00s/it
+Validation loss 900: TTS  1.821265  VC  2.041199
+Saving model and optimizer state at iteration 900 to outdir_emotion_IS/checkpoint_900
+Train VC 901 0.585561 Grad Norm 0.208351 1.13s/it
+Train TTS 902 0.600075 Grad Norm 0.243367 1.07s/it
+Train VC 903 0.587971 Grad Norm 0.220096 1.15s/it
+Train TTS 904 0.599119 Grad Norm 0.211646 1.12s/it
+Train VC 905 0.595559 Grad Norm 0.239405 0.94s/it
+Train TTS 906 0.592929 Grad Norm 0.218497 1.05s/it
+Train VC 907 0.595473 Grad Norm 0.265206 0.94s/it
+Train TTS 908 0.610265 Grad Norm 0.259291 0.86s/it
+Train VC 909 0.572889 Grad Norm 0.190431 0.95s/it
+Train TTS 910 0.622980 Grad Norm 0.314412 0.93s/it
+Train VC 911 0.572938 Grad Norm 0.182219 1.08s/it
+Train TTS 912 0.590947 Grad Norm 0.210473 0.87s/it
+Train VC 913 0.580650 Grad Norm 0.222368 0.92s/it
+Train TTS 914 0.594089 Grad Norm 0.246322 1.07s/it
+Train VC 915 0.577174 Grad Norm 0.201586 0.93s/it
+Train TTS 916 0.597952 Grad Norm 0.238430 1.05s/it
+Train VC 917 0.578949 Grad Norm 0.234716 0.86s/it
+Train TTS 918 0.598184 Grad Norm 0.223667 0.90s/it
+Train VC 919 0.582612 Grad Norm 0.220339 1.13s/it
+Train TTS 920 0.606342 Grad Norm 0.211681 1.14s/it
+Train VC 921 0.599926 Grad Norm 0.222414 1.20s/it
+Train TTS 922 0.597986 Grad Norm 0.265027 1.02s/it
+Train VC 923 0.587285 Grad Norm 0.225990 0.78s/it
+Train TTS 924 0.595922 Grad Norm 0.225889 0.80s/it
+Epoch: 25
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1332: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1332: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1320: UserWarning: nn.functional.tanh is deprecated. Use torch.tanh instead.
+  warnings.warn("nn.functional.tanh is deprecated. Use torch.tanh instead.")
+/home/zhoukun/nonparaSeq2seqVC_code-master/pre-train_IS/model/loss.py:111: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  padded = torch.tensor(text_target.data.new(B,1).zero_())
+Train TTS 925 0.599625 Grad Norm 0.242530 1.21s/it
+Train VC 926 0.592014 Grad Norm 0.244458 1.10s/it
+Train TTS 927 0.585067 Grad Norm 0.207178 0.91s/it
+Train VC 928 0.578345 Grad Norm 0.183843 0.96s/it
+Train TTS 929 0.588397 Grad Norm 0.219771 0.93s/it
+Train VC 930 0.582170 Grad Norm 0.185664 0.92s/it
+Train TTS 931 0.590330 Grad Norm 0.199065 0.95s/it
+Train VC 932 0.631922 Grad Norm 0.307320 0.88s/it
+Train TTS 933 0.610004 Grad Norm 0.206927 1.04s/it
+Train VC 934 0.568304 Grad Norm 0.216463 0.95s/it
+Train TTS 935 0.588393 Grad Norm 0.194086 1.08s/it
+Train VC 936 0.574514 Grad Norm 0.189033 1.19s/it
+Train TTS 937 0.577057 Grad Norm 0.225410 1.09s/it
+Train VC 938 0.574345 Grad Norm 0.218636 0.89s/it
+Train TTS 939 0.584899 Grad Norm 0.205826 0.86s/it
+Train VC 940 0.580385 Grad Norm 0.203786 1.05s/it
+Train TTS 941 0.607929 Grad Norm 0.226026 1.02s/it
+Train VC 942 0.573029 Grad Norm 0.177158 0.97s/it
+Train TTS 943 0.585122 Grad Norm 0.179324 0.86s/it
+Train VC 944 0.564131 Grad Norm 0.172586 1.00s/it
+Train TTS 945 0.602069 Grad Norm 0.223262 1.10s/it
+Train VC 946 0.571879 Grad Norm 0.202813 0.96s/it
+Train TTS 947 0.585081 Grad Norm 0.220149 1.08s/it
+Train VC 948 0.580516 Grad Norm 0.210608 0.98s/it
+Train TTS 949 0.609599 Grad Norm 0.334615 0.88s/it
+Train VC 950 0.580079 Grad Norm 0.267275 0.87s/it
+Train TTS 951 0.596825 Grad Norm 0.250488 0.91s/it
+Train VC 952 0.585678 Grad Norm 0.239002 0.99s/it
+Train TTS 953 0.592888 Grad Norm 0.215175 1.05s/it
+Train VC 954 0.576858 Grad Norm 0.271930 1.12s/it
+Train TTS 955 0.605520 Grad Norm 0.255802 0.85s/it
+Train VC 956 0.610393 Grad Norm 0.259348 0.82s/it
+Train TTS 957 0.603794 Grad Norm 0.307689 0.85s/it
+Train VC 958 0.575566 Grad Norm 0.200266 0.89s/it
+Train TTS 959 0.589934 Grad Norm 0.237058 1.11s/it
+Train VC 960 0.578867 Grad Norm 0.187972 0.98s/it
+Train TTS 961 0.585893 Grad Norm 0.240053 0.76s/it
+Epoch: 26
+Train TTS 962 0.583414 Grad Norm 0.197098 1.17s/it
+Train VC 963 0.569600 Grad Norm 0.228840 0.98s/it
+Train TTS 964 0.596982 Grad Norm 0.216992 1.12s/it
+Train VC 965 0.567949 Grad Norm 0.177233 1.04s/it
+Train TTS 966 0.591856 Grad Norm 0.280687 1.17s/it
+Train VC 967 0.562211 Grad Norm 0.208825 1.08s/it
+Train TTS 968 0.583309 Grad Norm 0.291870 0.86s/it
+Train VC 969 0.561778 Grad Norm 0.220430 0.99s/it
+Train TTS 970 0.589180 Grad Norm 0.275124 1.03s/it
+Train VC 971 0.579651 Grad Norm 0.311269 1.09s/it
+Train TTS 972 0.584555 Grad Norm 0.232514 1.13s/it
+Train VC 973 0.583757 Grad Norm 0.250278 1.10s/it
+Train TTS 974 0.597590 Grad Norm 0.394813 0.89s/it
+Train VC 975 0.578316 Grad Norm 0.204156 0.93s/it
+Train TTS 976 0.603131 Grad Norm 0.273326 0.98s/it
+Train VC 977 0.585725 Grad Norm 0.260088 0.92s/it
+Train TTS 978 0.608461 Grad Norm 0.272293 0.96s/it
+Train VC 979 0.597948 Grad Norm 0.237778 0.92s/it
+Train TTS 980 0.589261 Grad Norm 0.203079 0.94s/it
+Train VC 981 0.586425 Grad Norm 0.288868 1.00s/it
+Train TTS 982 0.589913 Grad Norm 0.274035 0.92s/it
+Train VC 983 0.579823 Grad Norm 0.226122 1.08s/it
+Train TTS 984 0.598773 Grad Norm 0.247102 0.92s/it
+Train VC 985 0.585160 Grad Norm 0.582851 1.09s/it
+Train TTS 986 0.577514 Grad Norm 0.210892 1.19s/it
+Train VC 987 0.573309 Grad Norm 0.235103 1.00s/it
+Train TTS 988 0.592140 Grad Norm 0.274175 0.93s/it
+Train VC 989 0.585493 Grad Norm 0.270350 0.97s/it
+Train TTS 990 0.590339 Grad Norm 0.239552 0.98s/it
+Train VC 991 0.574883 Grad Norm 0.238032 1.07s/it
+Train TTS 992 0.594006 Grad Norm 0.199179 1.04s/it
+Train VC 993 0.589916 Grad Norm 0.244648 0.98s/it
+Train TTS 994 0.594906 Grad Norm 0.211561 0.89s/it
+Train VC 995 0.569332 Grad Norm 0.196977 0.90s/it
+Train TTS 996 0.601627 Grad Norm 0.231627 1.01s/it
+Train VC 997 0.578232 Grad Norm 0.218673 0.78s/it
+Train TTS 998 0.588846 Grad Norm 0.225588 0.86s/it
+Epoch: 27
+Train TTS 999 0.587006 Grad Norm 0.241122 1.21s/it
+Train VC 1000 0.595890 Grad Norm 0.243317 1.07s/it
+Validation loss 1000: TTS  1.824846  VC  2.037449
+Saving model and optimizer state at iteration 1000 to outdir_emotion_IS/checkpoint_1000
+Train TTS 1001 0.606078 Grad Norm 0.280399 0.98s/it
+Train VC 1002 0.584638 Grad Norm 0.236684 1.06s/it
+Train TTS 1003 0.603059 Grad Norm 0.246772 0.94s/it
+Train VC 1004 0.575484 Grad Norm 0.179769 1.22s/it
+Train TTS 1005 0.586201 Grad Norm 0.202882 0.96s/it
+Train VC 1006 0.564630 Grad Norm 0.184190 0.88s/it
+Train TTS 1007 0.581445 Grad Norm 0.207155 0.93s/it
+Train VC 1008 0.575637 Grad Norm 0.195746 1.00s/it
+Train TTS 1009 0.591660 Grad Norm 0.281615 0.90s/it
+Train VC 1010 0.587788 Grad Norm 0.249165 0.97s/it
+Train TTS 1011 0.582061 Grad Norm 0.222012 0.98s/it
+Train VC 1012 0.577657 Grad Norm 0.240392 0.86s/it
+Train TTS 1013 0.582927 Grad Norm 0.207477 0.97s/it
+Train VC 1014 0.571161 Grad Norm 0.235947 0.94s/it
+Train TTS 1015 0.608496 Grad Norm 0.263585 1.15s/it
+Train VC 1016 0.579760 Grad Norm 0.243013 0.96s/it
+Train TTS 1017 0.586511 Grad Norm 0.266259 1.01s/it
+Train VC 1018 0.578878 Grad Norm 0.308344 1.19s/it
+Train TTS 1019 0.596277 Grad Norm 0.264511 1.15s/it
+Train VC 1020 0.580894 Grad Norm 0.211988 0.92s/it
+Train TTS 1021 0.586735 Grad Norm 0.215714 1.18s/it
+Train VC 1022 0.560582 Grad Norm 0.262428 0.93s/it
+Train TTS 1023 0.588737 Grad Norm 0.285911 0.97s/it
+Train VC 1024 0.577831 Grad Norm 0.234036 0.89s/it
+Train TTS 1025 0.589094 Grad Norm 0.264520 1.02s/it
+Train VC 1026 0.566962 Grad Norm 0.224408 1.01s/it
+Train TTS 1027 0.591622 Grad Norm 0.222580 1.09s/it
+Train VC 1028 0.591585 Grad Norm 0.244058 1.13s/it
+Train TTS 1029 0.614729 Grad Norm 0.303317 0.87s/it
+Train VC 1030 0.595176 Grad Norm 0.258103 0.99s/it
+Train TTS 1031 0.588236 Grad Norm 0.218093 1.00s/it
+Train VC 1032 0.580398 Grad Norm 0.202820 0.84s/it
+Train TTS 1033 0.608567 Grad Norm 0.270020 0.90s/it
+Train VC 1034 0.583258 Grad Norm 0.242332 0.83s/it
+Train TTS 1035 0.592335 Grad Norm 0.197594 0.86s/it
+Epoch: 28
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1332: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1332: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1320: UserWarning: nn.functional.tanh is deprecated. Use torch.tanh instead.
+  warnings.warn("nn.functional.tanh is deprecated. Use torch.tanh instead.")
+/home/zhoukun/nonparaSeq2seqVC_code-master/pre-train_IS/model/loss.py:111: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  padded = torch.tensor(text_target.data.new(B,1).zero_())
+Train TTS 1036 0.585400 Grad Norm 0.232923 1.14s/it
+Train VC 1037 0.560786 Grad Norm 0.200250 0.92s/it
+Train TTS 1038 0.581425 Grad Norm 0.198279 1.03s/it
+Train VC 1039 0.575095 Grad Norm 0.207890 1.13s/it
+Train TTS 1040 0.600562 Grad Norm 0.239554 1.17s/it
+Train VC 1041 0.579591 Grad Norm 0.251162 0.93s/it
+Train TTS 1042 0.588632 Grad Norm 0.202839 0.94s/it
+Train VC 1043 0.574985 Grad Norm 0.171489 1.06s/it
+Train TTS 1044 0.593751 Grad Norm 0.240544 0.94s/it
+Train VC 1045 0.575281 Grad Norm 0.204068 0.98s/it
+Train TTS 1046 0.585467 Grad Norm 0.213793 0.87s/it
+Train VC 1047 0.569175 Grad Norm 0.190861 1.11s/it
+Train TTS 1048 0.607636 Grad Norm 0.243749 1.08s/it
+Train VC 1049 0.573196 Grad Norm 0.167989 0.87s/it
+Train TTS 1050 0.579607 Grad Norm 0.190798 0.91s/it
+Train VC 1051 0.579801 Grad Norm 0.183333 0.94s/it
+Train TTS 1052 0.578878 Grad Norm 0.244981 1.08s/it
+Train VC 1053 0.572933 Grad Norm 0.207138 0.97s/it
+Train TTS 1054 0.582306 Grad Norm 0.193806 0.94s/it
+Train VC 1055 0.564399 Grad Norm 0.210458 1.02s/it
+Train TTS 1056 0.573816 Grad Norm 0.202919 0.90s/it
+Train VC 1057 0.583291 Grad Norm 0.250988 0.97s/it
+Train TTS 1058 0.587849 Grad Norm 0.207277 1.00s/it
+Train VC 1059 0.579120 Grad Norm 0.239160 0.92s/it
+Train TTS 1060 0.585706 Grad Norm 0.226734 1.08s/it
+Train VC 1061 0.562707 Grad Norm 0.182773 0.94s/it
+Train TTS 1062 0.575120 Grad Norm 0.189395 1.00s/it
+Train VC 1063 0.599967 Grad Norm 0.265927 1.06s/it
+Train TTS 1064 0.586193 Grad Norm 0.218477 0.98s/it
+Train VC 1065 0.580025 Grad Norm 0.216784 1.11s/it
+Train TTS 1066 0.592834 Grad Norm 0.228952 1.20s/it
+Train VC 1067 0.568176 Grad Norm 0.146401 1.02s/it
+Train TTS 1068 0.586972 Grad Norm 0.220390 0.85s/it
+Train VC 1069 0.569962 Grad Norm 0.190003 0.95s/it
+Train TTS 1070 0.595030 Grad Norm 0.282933 0.88s/it
+Train VC 1071 0.561967 Grad Norm 0.188384 0.85s/it
+Train TTS 1072 0.587487 Grad Norm 0.205907 0.86s/it
+Epoch: 29
+Train TTS 1073 0.585099 Grad Norm 0.222287 1.03s/it
+Train VC 1074 0.577607 Grad Norm 0.214147 0.97s/it
+Train TTS 1075 0.580670 Grad Norm 0.203708 0.93s/it
+Train VC 1076 0.561169 Grad Norm 0.168657 1.13s/it
+Train TTS 1077 0.586596 Grad Norm 0.204730 1.08s/it
+Train VC 1078 0.580401 Grad Norm 0.243772 1.05s/it
+Train TTS 1079 0.583379 Grad Norm 0.232047 1.14s/it
+Train VC 1080 0.558344 Grad Norm 0.151249 0.98s/it
+Train TTS 1081 0.580640 Grad Norm 0.299782 0.96s/it
+Train VC 1082 0.575936 Grad Norm 0.201550 1.02s/it
+Train TTS 1083 0.588592 Grad Norm 0.216185 1.08s/it
+Train VC 1084 0.581238 Grad Norm 0.213172 0.91s/it
+Train TTS 1085 0.593564 Grad Norm 0.201426 0.97s/it
+Train VC 1086 0.567541 Grad Norm 0.257054 1.19s/it
+Train TTS 1087 0.596451 Grad Norm 0.236173 0.93s/it
+Train VC 1088 0.579168 Grad Norm 0.202475 0.89s/it
+Train TTS 1089 0.588911 Grad Norm 0.255056 1.17s/it
+Train VC 1090 0.562583 Grad Norm 0.261328 1.01s/it
+Train TTS 1091 0.662861 Grad Norm 0.658141 0.83s/it
+Train VC 1092 0.571460 Grad Norm 0.275506 0.85s/it
+Train TTS 1093 0.571020 Grad Norm 0.198353 1.06s/it
+Train VC 1094 0.566809 Grad Norm 0.178687 1.09s/it
+Train TTS 1095 0.581035 Grad Norm 0.263207 0.96s/it
+Train VC 1096 0.556423 Grad Norm 0.246649 1.11s/it
+Train TTS 1097 0.579560 Grad Norm 0.228884 0.94s/it
+Train VC 1098 0.589669 Grad Norm 0.201223 0.92s/it
+Train TTS 1099 0.579568 Grad Norm 0.215522 0.93s/it
+Train VC 1100 0.570836 Grad Norm 0.193131 0.96s/it
+Validation loss 1100: TTS  1.828728  VC  2.049171
+Saving model and optimizer state at iteration 1100 to outdir_emotion_IS/checkpoint_1100
+Train TTS 1101 0.598800 Grad Norm 0.233175 0.96s/it
+Train VC 1102 0.573814 Grad Norm 0.203386 1.03s/it
+Train TTS 1103 0.585298 Grad Norm 0.229600 0.89s/it
+Train VC 1104 0.568264 Grad Norm 0.193984 0.92s/it
+Train TTS 1105 0.585778 Grad Norm 0.186073 1.08s/it
+Train VC 1106 0.574429 Grad Norm 0.217469 0.94s/it
+Train TTS 1107 0.595471 Grad Norm 0.338835 1.12s/it
+Train VC 1108 0.575767 Grad Norm 0.283966 0.85s/it
+Train TTS 1109 0.594845 Grad Norm 0.266442 1.01s/it
+Epoch: 30
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1332: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1332: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1320: UserWarning: nn.functional.tanh is deprecated. Use torch.tanh instead.
+  warnings.warn("nn.functional.tanh is deprecated. Use torch.tanh instead.")
+/home/zhoukun/nonparaSeq2seqVC_code-master/pre-train_IS/model/loss.py:111: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  padded = torch.tensor(text_target.data.new(B,1).zero_())
+Train TTS 1110 0.580552 Grad Norm 0.195283 1.18s/it
+Train VC 1111 0.564891 Grad Norm 0.234036 1.14s/it
+Train TTS 1112 0.579309 Grad Norm 0.224228 1.20s/it
+Train VC 1113 0.564143 Grad Norm 0.184927 1.12s/it
+Train TTS 1114 0.577115 Grad Norm 0.185262 1.08s/it
+Train VC 1115 0.584385 Grad Norm 0.205623 0.89s/it
+Train TTS 1116 0.581316 Grad Norm 0.210157 0.96s/it
+Train VC 1117 0.563929 Grad Norm 0.190970 1.08s/it
+Train TTS 1118 0.577332 Grad Norm 0.192533 1.10s/it
+Train VC 1119 0.566973 Grad Norm 0.206128 1.13s/it
+Train TTS 1120 0.604315 Grad Norm 0.218810 0.93s/it
+Train VC 1121 0.565044 Grad Norm 0.146903 1.05s/it
+Train TTS 1122 0.576307 Grad Norm 0.187011 0.97s/it
+Train VC 1123 0.563864 Grad Norm 0.255059 0.96s/it
+Train TTS 1124 0.584665 Grad Norm 0.250743 0.88s/it
+Train VC 1125 0.566740 Grad Norm 0.164921 1.15s/it
+Train TTS 1126 0.594686 Grad Norm 0.259571 0.87s/it
+Train VC 1127 0.572875 Grad Norm 0.229665 1.05s/it
+Train TTS 1128 0.594316 Grad Norm 0.241789 0.96s/it
+Train VC 1129 0.572113 Grad Norm 0.251189 0.98s/it
+Train TTS 1130 0.586753 Grad Norm 0.226545 0.90s/it
+Train VC 1131 0.570863 Grad Norm 0.239654 0.87s/it
+Train TTS 1132 0.580237 Grad Norm 0.195680 0.97s/it
+Train VC 1133 0.563225 Grad Norm 0.184788 0.94s/it
+Train TTS 1134 0.576420 Grad Norm 0.189369 0.99s/it
+Train VC 1135 0.567489 Grad Norm 0.199585 0.98s/it
+Train TTS 1136 0.571982 Grad Norm 0.206276 0.92s/it
+Train VC 1137 0.560327 Grad Norm 0.192643 0.95s/it
+Train TTS 1138 0.590335 Grad Norm 0.225430 0.95s/it
+Train VC 1139 0.561729 Grad Norm 0.179980 0.89s/it
+Train TTS 1140 0.593114 Grad Norm 0.214097 0.89s/it
+Train VC 1141 0.568568 Grad Norm 0.191405 1.02s/it
+Train TTS 1142 0.568845 Grad Norm 0.226189 1.05s/it
+Train VC 1143 0.565636 Grad Norm 0.183114 0.89s/it
+Train TTS 1144 0.589177 Grad Norm 0.213394 1.04s/it
+Train VC 1145 0.566217 Grad Norm 0.177890 0.71s/it
+Train TTS 1146 0.583837 Grad Norm 0.242314 0.80s/it
+Epoch: 31
+Train TTS 1147 0.580179 Grad Norm 0.202183 1.08s/it
+Train VC 1148 0.566824 Grad Norm 0.201237 1.09s/it
+Train TTS 1149 0.575346 Grad Norm 0.207441 0.86s/it
+Train VC 1150 0.575162 Grad Norm 0.205010 1.10s/it
+Train TTS 1151 0.592933 Grad Norm 0.245290 1.14s/it
+Train VC 1152 0.577449 Grad Norm 0.193208 0.94s/it
+Train TTS 1153 0.582217 Grad Norm 0.251348 1.10s/it
+Train VC 1154 0.570603 Grad Norm 0.186793 1.02s/it
+Train TTS 1155 0.585895 Grad Norm 0.219014 0.91s/it
+Train VC 1156 0.574313 Grad Norm 0.201749 1.06s/it
+Train TTS 1157 0.584889 Grad Norm 0.537962 1.01s/it
+Train VC 1158 0.560453 Grad Norm 0.205702 1.06s/it
+Train TTS 1159 0.577636 Grad Norm 0.222995 0.91s/it
+Train VC 1160 0.566669 Grad Norm 0.191650 1.08s/it
+Train TTS 1161 0.582879 Grad Norm 0.312543 1.18s/it
+Train VC 1162 0.577914 Grad Norm 0.217880 0.89s/it
+Train TTS 1163 0.577801 Grad Norm 0.227399 0.92s/it
+Train VC 1164 0.579889 Grad Norm 0.186618 0.87s/it
+Train TTS 1165 0.577105 Grad Norm 0.215419 1.02s/it
+Train VC 1166 0.566796 Grad Norm 0.203015 1.12s/it
+Train TTS 1167 0.643065 Grad Norm 0.401559 1.02s/it
+Train VC 1168 0.576283 Grad Norm 0.186521 0.98s/it
+Train TTS 1169 0.583005 Grad Norm 0.240434 0.94s/it
+Train VC 1170 0.569631 Grad Norm 0.179144 1.15s/it
+Train TTS 1171 0.560711 Grad Norm 0.201226 0.85s/it
+Train VC 1172 0.573121 Grad Norm 0.223979 0.94s/it
+Train TTS 1173 0.589103 Grad Norm 0.359227 1.17s/it
+Train VC 1174 0.569193 Grad Norm 0.211491 0.95s/it
+Train TTS 1175 0.582223 Grad Norm 0.205682 0.98s/it
+Train VC 1176 0.563102 Grad Norm 0.192091 1.06s/it
+Train TTS 1177 0.561577 Grad Norm 0.205532 0.92s/it
+Train VC 1178 0.558367 Grad Norm 0.199282 1.05s/it
+Train TTS 1179 0.578616 Grad Norm 0.197447 0.93s/it
+Train VC 1180 0.566272 Grad Norm 0.202684 0.88s/it
+Train TTS 1181 0.582351 Grad Norm 0.238404 0.94s/it
+Train VC 1182 0.574758 Grad Norm 0.228581 0.91s/it
+Train TTS 1183 0.605639 Grad Norm 0.283581 0.79s/it
+Epoch: 32
+Train TTS 1184 0.591194 Grad Norm 0.238271 0.95s/it
+Train VC 1185 0.570975 Grad Norm 0.239808 1.07s/it
+Train TTS 1186 0.573507 Grad Norm 0.219873 0.90s/it
+Train VC 1187 0.564788 Grad Norm 0.215066 0.95s/it
+Train TTS 1188 0.581534 Grad Norm 0.219547 0.91s/it
+Train VC 1189 0.567684 Grad Norm 0.200918 1.02s/it
+Train TTS 1190 0.578374 Grad Norm 0.215132 1.12s/it
+Train VC 1191 0.559337 Grad Norm 0.203662 0.92s/it
+Train TTS 1192 0.583412 Grad Norm 0.235080 0.87s/it
+Train VC 1193 0.560825 Grad Norm 0.177097 1.06s/it
+Train TTS 1194 0.586103 Grad Norm 0.238507 0.89s/it
+Train VC 1195 0.572009 Grad Norm 0.199139 0.92s/it
+Train TTS 1196 0.578332 Grad Norm 0.232225 1.16s/it
+Train VC 1197 0.565676 Grad Norm 0.206578 0.97s/it
+Train TTS 1198 0.653204 Grad Norm 0.447616 0.81s/it
+Train VC 1199 0.572531 Grad Norm 0.230053 0.97s/it
+Train TTS 1200 0.580934 Grad Norm 0.202377 1.11s/it
+Validation loss 1200: TTS  1.818085  VC  2.026237
+Saving model and optimizer state at iteration 1200 to outdir_emotion_IS/checkpoint_1200
+Train VC 1201 0.568696 Grad Norm 0.219384 1.02s/it
+Train TTS 1202 0.584905 Grad Norm 0.243001 1.06s/it
+Train VC 1203 0.559517 Grad Norm 0.187123 1.12s/it
+Train TTS 1204 0.573850 Grad Norm 0.200533 1.00s/it
+Train VC 1205 0.567870 Grad Norm 0.194507 0.89s/it
+Train TTS 1206 0.592028 Grad Norm 0.219691 1.05s/it
+Train VC 1207 0.585674 Grad Norm 0.228483 0.90s/it
+Train TTS 1208 0.583978 Grad Norm 0.250692 0.87s/it
+Train VC 1209 0.570983 Grad Norm 0.194885 1.18s/it
+Train TTS 1210 0.586500 Grad Norm 0.279977 0.89s/it
+Train VC 1211 0.569916 Grad Norm 0.210005 1.08s/it
+Train TTS 1212 0.574091 Grad Norm 0.227560 1.01s/it
+Train VC 1213 0.562058 Grad Norm 0.206155 0.96s/it
+Train TTS 1214 0.581225 Grad Norm 0.215404 0.95s/it
+Train VC 1215 0.571957 Grad Norm 0.221222 1.00s/it
+Train TTS 1216 0.587300 Grad Norm 0.268331 0.91s/it
+Train VC 1217 0.577994 Grad Norm 0.274015 0.89s/it
+Train TTS 1218 0.578316 Grad Norm 0.225512 1.12s/it
+Train VC 1219 0.573933 Grad Norm 0.216960 0.87s/it
+Train TTS 1220 0.577232 Grad Norm 0.201296 0.79s/it
+Epoch: 33
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1332: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1332: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1320: UserWarning: nn.functional.tanh is deprecated. Use torch.tanh instead.
+  warnings.warn("nn.functional.tanh is deprecated. Use torch.tanh instead.")
+/home/zhoukun/nonparaSeq2seqVC_code-master/pre-train_IS/model/loss.py:111: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  padded = torch.tensor(text_target.data.new(B,1).zero_())
+Train TTS 1221 0.580128 Grad Norm 0.320740 1.04s/it
+Train VC 1222 0.566784 Grad Norm 0.229237 0.99s/it
+Train TTS 1223 0.573033 Grad Norm 0.244378 0.95s/it
+Train VC 1224 0.570597 Grad Norm 0.200759 1.05s/it
+Train TTS 1225 0.579542 Grad Norm 0.230434 0.81s/it
+Train VC 1226 0.569996 Grad Norm 0.195364 0.97s/it
+Train TTS 1227 0.579986 Grad Norm 0.217590 1.07s/it
+Train VC 1228 0.571102 Grad Norm 0.192584 0.88s/it
+Train TTS 1229 0.583816 Grad Norm 0.238786 1.11s/it
+Train VC 1230 0.565888 Grad Norm 0.195815 1.08s/it
+Train TTS 1231 0.580500 Grad Norm 0.210892 1.06s/it
+Train VC 1232 0.574058 Grad Norm 0.201740 1.10s/it
+Train TTS 1233 0.583260 Grad Norm 0.221254 1.05s/it
+Train VC 1234 0.558796 Grad Norm 0.186528 1.02s/it
+Train TTS 1235 0.581217 Grad Norm 0.202875 0.99s/it
+Train VC 1236 0.556342 Grad Norm 0.163798 1.13s/it
+Train TTS 1237 0.568035 Grad Norm 0.189681 0.90s/it
+Train VC 1238 0.573589 Grad Norm 0.239379 0.96s/it
+Train TTS 1239 0.591386 Grad Norm 0.245996 1.02s/it
+Train VC 1240 0.566888 Grad Norm 0.167119 1.17s/it
+Train TTS 1241 0.597607 Grad Norm 0.228358 0.93s/it
+Train VC 1242 0.570329 Grad Norm 0.263478 1.02s/it
+Train TTS 1243 0.587474 Grad Norm 0.244444 1.06s/it
+Train VC 1244 0.566568 Grad Norm 0.220381 0.92s/it
+Train TTS 1245 0.575790 Grad Norm 0.227802 0.88s/it
+Train VC 1246 0.570672 Grad Norm 0.265865 0.86s/it
+Train TTS 1247 0.580062 Grad Norm 0.221648 0.91s/it
+Train VC 1248 0.569078 Grad Norm 0.197194 0.91s/it
+Train TTS 1249 0.577433 Grad Norm 0.213914 0.94s/it
+Train VC 1250 0.574467 Grad Norm 0.209002 0.93s/it
+Train TTS 1251 0.580228 Grad Norm 0.216399 0.86s/it
+Train VC 1252 0.563209 Grad Norm 0.168659 0.95s/it
+Train TTS 1253 0.575745 Grad Norm 0.183209 1.07s/it
+Train VC 1254 0.567503 Grad Norm 0.183490 1.20s/it
+Train TTS 1255 0.575408 Grad Norm 0.218353 1.05s/it
+Train VC 1256 0.567553 Grad Norm 0.194671 0.85s/it
+Train TTS 1257 0.578844 Grad Norm 0.226126 1.00s/it
+Epoch: 34
+Train TTS 1258 0.573402 Grad Norm 0.218052 1.23s/it
+Train VC 1259 0.564670 Grad Norm 0.189971 0.99s/it
+Train TTS 1260 0.580876 Grad Norm 0.242901 0.99s/it
+Train VC 1261 0.567164 Grad Norm 0.229689 0.98s/it
+Train TTS 1262 0.580291 Grad Norm 0.215446 0.93s/it
+Train VC 1263 0.571388 Grad Norm 0.202088 1.17s/it
+Train TTS 1264 0.608346 Grad Norm 0.242796 0.85s/it
+Train VC 1265 0.570975 Grad Norm 0.192613 0.96s/it
+Train TTS 1266 0.582142 Grad Norm 0.253583 1.07s/it
+Train VC 1267 0.581743 Grad Norm 0.226643 1.00s/it
+Train TTS 1268 0.584881 Grad Norm 0.243142 1.00s/it
+Train VC 1269 0.566116 Grad Norm 0.208013 0.93s/it
+Train TTS 1270 0.587493 Grad Norm 0.227767 0.88s/it
+Train VC 1271 0.562002 Grad Norm 0.164161 0.94s/it
+Train TTS 1272 0.579576 Grad Norm 0.225187 1.08s/it
+Train VC 1273 0.571619 Grad Norm 0.207503 0.94s/it
+Train TTS 1274 0.589692 Grad Norm 0.214648 0.97s/it
+Train VC 1275 0.578589 Grad Norm 0.198525 1.12s/it
+Train TTS 1276 0.599251 Grad Norm 0.266690 0.95s/it
+Train VC 1277 0.563302 Grad Norm 0.226649 0.95s/it
+Train TTS 1278 0.585563 Grad Norm 0.253823 1.01s/it
+Train VC 1279 0.568098 Grad Norm 0.211437 1.06s/it
+Train TTS 1280 0.587668 Grad Norm 0.236511 1.07s/it
+Train VC 1281 0.571032 Grad Norm 0.226606 0.96s/it
+Train TTS 1282 0.571532 Grad Norm 0.223535 0.92s/it
+Train VC 1283 0.564382 Grad Norm 0.187588 1.18s/it
+Train TTS 1284 0.571587 Grad Norm 0.217980 0.92s/it
+Train VC 1285 0.557132 Grad Norm 0.197633 1.08s/it
+Train TTS 1286 0.589163 Grad Norm 0.258883 0.82s/it
+Train VC 1287 0.561330 Grad Norm 0.203083 1.00s/it
+Train TTS 1288 0.588825 Grad Norm 0.272734 0.93s/it
+Train VC 1289 0.555518 Grad Norm 0.172508 1.05s/it
+Train TTS 1290 0.581462 Grad Norm 0.279017 0.95s/it
+Train VC 1291 0.558707 Grad Norm 0.186842 1.10s/it
+Train TTS 1292 0.574887 Grad Norm 0.246409 0.90s/it
+Train VC 1293 0.556780 Grad Norm 0.213199 0.97s/it
+Train TTS 1294 0.583366 Grad Norm 0.281798 0.89s/it
+Epoch: 35
+Train TTS 1295 0.573651 Grad Norm 0.223700 1.10s/it
+Train VC 1296 0.573679 Grad Norm 0.231027 1.02s/it
+Train TTS 1297 0.570441 Grad Norm 0.216835 0.90s/it
+Train VC 1298 0.557659 Grad Norm 0.194889 1.00s/it
+Train TTS 1299 0.573189 Grad Norm 0.225593 1.10s/it
+Train VC 1300 0.569254 Grad Norm 0.192671 0.91s/it
+Validation loss 1300: TTS  1.827920  VC  2.040519
+Saving model and optimizer state at iteration 1300 to outdir_emotion_IS/checkpoint_1300
+Train TTS 1301 0.575473 Grad Norm 0.269093 1.25s/it
+Train VC 1302 0.576443 Grad Norm 0.216778 0.87s/it
+Train TTS 1303 0.579825 Grad Norm 0.250761 0.98s/it
+Train VC 1304 0.556660 Grad Norm 0.175865 1.05s/it
+Train TTS 1305 0.586593 Grad Norm 0.243661 0.86s/it
+Train VC 1306 0.566647 Grad Norm 0.178779 1.07s/it
+Train TTS 1307 0.579374 Grad Norm 0.216390 0.98s/it
+Train VC 1308 0.557208 Grad Norm 0.208219 0.95s/it
+Train TTS 1309 0.576719 Grad Norm 0.207611 0.94s/it
+Train VC 1310 0.557765 Grad Norm 0.198395 1.09s/it
+Train TTS 1311 0.585195 Grad Norm 0.214796 1.12s/it
+Train VC 1312 0.553664 Grad Norm 0.184290 0.87s/it
+Train TTS 1313 0.570302 Grad Norm 0.191242 0.99s/it
+Train VC 1314 0.558592 Grad Norm 0.166667 0.97s/it
+Train TTS 1315 0.570764 Grad Norm 0.204557 0.98s/it
+Train VC 1316 0.567137 Grad Norm 0.190562 0.93s/it
+Train TTS 1317 0.568797 Grad Norm 0.206644 1.02s/it
+Train VC 1318 0.565991 Grad Norm 0.226291 0.97s/it
+Train TTS 1319 0.587293 Grad Norm 0.206551 0.83s/it
+Train VC 1320 0.555504 Grad Norm 0.174942 1.09s/it
+Train TTS 1321 0.574933 Grad Norm 0.206994 1.09s/it
+Train VC 1322 0.568095 Grad Norm 0.167548 0.94s/it
+Train TTS 1323 0.557759 Grad Norm 0.181701 1.12s/it
+Train VC 1324 0.563359 Grad Norm 0.184241 0.94s/it
+Train TTS 1325 0.583045 Grad Norm 0.211097 0.89s/it
+Train VC 1326 0.557097 Grad Norm 0.159071 0.90s/it
+Train TTS 1327 0.611133 Grad Norm 0.314852 0.86s/it
+Train VC 1328 0.569830 Grad Norm 0.194064 0.89s/it
+Train TTS 1329 0.584126 Grad Norm 0.308094 1.09s/it
+Train VC 1330 0.561116 Grad Norm 0.218010 0.81s/it
+Train TTS 1331 0.581162 Grad Norm 0.213644 0.99s/it
+Epoch: 36
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1332: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1332: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1320: UserWarning: nn.functional.tanh is deprecated. Use torch.tanh instead.
+  warnings.warn("nn.functional.tanh is deprecated. Use torch.tanh instead.")
+/home/zhoukun/nonparaSeq2seqVC_code-master/pre-train_IS/model/loss.py:111: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  padded = torch.tensor(text_target.data.new(B,1).zero_())
+Train TTS 1332 0.566868 Grad Norm 0.183986 1.19s/it
+Train VC 1333 0.564415 Grad Norm 0.163109 0.89s/it
+Train TTS 1334 0.574530 Grad Norm 0.210600 0.95s/it
+Train VC 1335 0.553998 Grad Norm 0.175223 0.97s/it
+Train TTS 1336 0.575605 Grad Norm 0.236501 1.09s/it
+Train VC 1337 0.574543 Grad Norm 0.228181 1.00s/it
+Train TTS 1338 0.559844 Grad Norm 0.218530 0.85s/it
+Train VC 1339 0.559143 Grad Norm 0.195390 1.01s/it
+Train TTS 1340 0.573071 Grad Norm 0.212836 1.13s/it
+Train VC 1341 0.558453 Grad Norm 0.220201 0.99s/it
+Train TTS 1342 0.577629 Grad Norm 0.237287 0.99s/it
+Train VC 1343 0.566174 Grad Norm 0.167084 0.94s/it
+Train TTS 1344 0.574877 Grad Norm 0.188627 1.02s/it
+Train VC 1345 0.570977 Grad Norm 0.190536 0.95s/it
+Train TTS 1346 0.569319 Grad Norm 0.208803 1.04s/it
+Train VC 1347 0.567831 Grad Norm 0.182376 1.11s/it
+Train TTS 1348 0.571738 Grad Norm 0.182046 1.09s/it
+Train VC 1349 0.560137 Grad Norm 0.170433 1.22s/it
+Train TTS 1350 0.580111 Grad Norm 0.215795 0.99s/it
+Train VC 1351 0.560168 Grad Norm 0.165221 0.93s/it
+Train TTS 1352 0.574893 Grad Norm 0.211438 1.00s/it
+Train VC 1353 0.567323 Grad Norm 0.172854 0.97s/it
+Train TTS 1354 0.577400 Grad Norm 0.210652 0.84s/it
+Train VC 1355 0.554922 Grad Norm 0.218195 0.88s/it
+Train TTS 1356 0.571103 Grad Norm 0.203444 0.97s/it
+Train VC 1357 0.558289 Grad Norm 0.168571 1.19s/it
+Train TTS 1358 0.563536 Grad Norm 0.200408 1.10s/it
+Train VC 1359 0.588678 Grad Norm 0.253789 1.06s/it
+Train TTS 1360 0.586742 Grad Norm 0.264551 0.98s/it
+Train VC 1361 0.554408 Grad Norm 0.202953 0.92s/it
+Train TTS 1362 0.571582 Grad Norm 0.200294 1.05s/it
+Train VC 1363 0.558575 Grad Norm 0.191168 0.90s/it
+Train TTS 1364 0.583045 Grad Norm 0.195374 1.08s/it
+Train VC 1365 0.561350 Grad Norm 0.187068 1.12s/it
+Train TTS 1366 0.574084 Grad Norm 0.214106 0.98s/it
+Train VC 1367 0.558596 Grad Norm 0.215702 0.88s/it
+Train TTS 1368 0.576432 Grad Norm 0.198363 0.89s/it
+Epoch: 37
+Train TTS 1369 0.563866 Grad Norm 0.208767 1.04s/it
+Train VC 1370 0.636304 Grad Norm 0.417259 0.83s/it
+Train TTS 1371 0.578223 Grad Norm 0.252577 1.01s/it
+Train VC 1372 0.564025 Grad Norm 0.204240 1.12s/it
+Train TTS 1373 0.569998 Grad Norm 0.191033 1.17s/it
+Train VC 1374 0.548508 Grad Norm 0.170953 0.94s/it
+Train TTS 1375 0.575905 Grad Norm 0.216248 1.11s/it
+Train VC 1376 0.556192 Grad Norm 0.180398 0.91s/it
+Train TTS 1377 0.573159 Grad Norm 0.216466 1.06s/it
+Train VC 1378 0.563245 Grad Norm 0.176128 1.07s/it
+Train TTS 1379 0.576392 Grad Norm 0.194348 0.90s/it
+Train VC 1380 0.562027 Grad Norm 0.174837 0.93s/it
+Train TTS 1381 0.582550 Grad Norm 0.247506 0.81s/it
+Train VC 1382 0.554960 Grad Norm 0.169780 0.99s/it
+Train TTS 1383 0.574559 Grad Norm 0.193973 1.07s/it
+Train VC 1384 0.568321 Grad Norm 0.194518 0.99s/it
+Train TTS 1385 0.587337 Grad Norm 0.276189 0.83s/it
+Train VC 1386 0.560992 Grad Norm 0.229853 0.80s/it
+Train TTS 1387 0.571080 Grad Norm 0.210422 0.89s/it
+Train VC 1388 0.580727 Grad Norm 0.206777 0.83s/it
+Train TTS 1389 0.589594 Grad Norm 0.210781 0.99s/it
+Train VC 1390 0.565323 Grad Norm 0.168273 0.90s/it
+Train TTS 1391 0.574692 Grad Norm 0.185469 0.93s/it
+Train VC 1392 0.565901 Grad Norm 0.180123 1.01s/it
+Train TTS 1393 0.578950 Grad Norm 0.189987 1.04s/it
+Train VC 1394 0.566487 Grad Norm 0.200053 1.12s/it
+Train TTS 1395 0.597026 Grad Norm 0.240171 0.91s/it
+Train VC 1396 0.567395 Grad Norm 0.158221 0.93s/it
+Train TTS 1397 0.595185 Grad Norm 0.226569 1.04s/it
+Train VC 1398 0.562463 Grad Norm 0.197607 1.04s/it
+Train TTS 1399 0.577526 Grad Norm 0.239013 0.91s/it
+Train VC 1400 0.591487 Grad Norm 0.249274 0.90s/it
+Validation loss 1400: TTS  1.836303  VC  2.052320
+Saving model and optimizer state at iteration 1400 to outdir_emotion_IS/checkpoint_1400
+Train TTS 1401 0.570438 Grad Norm 0.226170 1.09s/it
+Train VC 1402 0.561080 Grad Norm 0.198158 0.96s/it
+Train TTS 1403 0.575526 Grad Norm 0.254078 0.88s/it
+Train VC 1404 0.570706 Grad Norm 0.210164 0.88s/it
+Train TTS 1405 0.578959 Grad Norm 0.204039 1.00s/it
+Epoch: 38
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1332: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1332: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1320: UserWarning: nn.functional.tanh is deprecated. Use torch.tanh instead.
+  warnings.warn("nn.functional.tanh is deprecated. Use torch.tanh instead.")
+/home/zhoukun/nonparaSeq2seqVC_code-master/pre-train_IS/model/loss.py:111: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  padded = torch.tensor(text_target.data.new(B,1).zero_())
+Train TTS 1406 0.566040 Grad Norm 0.162058 1.06s/it
+Train VC 1407 0.559596 Grad Norm 0.177635 0.93s/it
+Train TTS 1408 0.589378 Grad Norm 0.228018 0.88s/it
+Train VC 1409 0.577338 Grad Norm 0.211920 0.87s/it
+Train TTS 1410 0.570893 Grad Norm 0.197651 0.97s/it
+Train VC 1411 0.562030 Grad Norm 0.225087 0.87s/it
+Train TTS 1412 0.584829 Grad Norm 0.220001 0.90s/it
+Train VC 1413 0.561232 Grad Norm 0.217876 0.92s/it
+Train TTS 1414 0.582248 Grad Norm 0.210503 1.02s/it
+Train VC 1415 0.569051 Grad Norm 0.242224 1.10s/it
+Train TTS 1416 0.585916 Grad Norm 0.262963 0.90s/it
+Train VC 1417 0.568119 Grad Norm 0.209415 0.98s/it
+Train TTS 1418 0.580750 Grad Norm 0.240657 0.99s/it
+Train VC 1419 0.567917 Grad Norm 0.183106 1.19s/it
+Train TTS 1420 0.568883 Grad Norm 0.215760 0.97s/it
+Train VC 1421 0.559757 Grad Norm 0.180385 1.00s/it
+Train TTS 1422 0.618576 Grad Norm 0.370978 1.04s/it
+Train VC 1423 0.560172 Grad Norm 0.201562 0.98s/it
+Train TTS 1424 0.586945 Grad Norm 0.251259 0.82s/it
+Train VC 1425 0.555441 Grad Norm 0.155943 0.98s/it
+Train TTS 1426 0.576789 Grad Norm 0.212613 0.90s/it
+Train VC 1427 0.557025 Grad Norm 0.183018 1.09s/it
+Train TTS 1428 0.582154 Grad Norm 0.240679 1.06s/it
+Train VC 1429 0.561861 Grad Norm 0.165134 0.99s/it
+Train TTS 1430 0.568382 Grad Norm 0.214213 1.12s/it
+Train VC 1431 0.562452 Grad Norm 0.186331 1.17s/it
+Train TTS 1432 0.568527 Grad Norm 0.209898 1.08s/it
+Train VC 1433 0.567046 Grad Norm 0.185161 0.87s/it
+Train TTS 1434 0.576436 Grad Norm 0.215855 1.10s/it
+Train VC 1435 0.562165 Grad Norm 0.180207 0.94s/it
+Train TTS 1436 0.567870 Grad Norm 0.237478 1.01s/it
+Train VC 1437 0.565212 Grad Norm 0.180992 0.96s/it
+Train TTS 1438 0.577461 Grad Norm 0.254442 0.87s/it
+Train VC 1439 0.564487 Grad Norm 0.159816 0.85s/it
+Train TTS 1440 0.570782 Grad Norm 0.210606 0.92s/it
+Train VC 1441 0.571172 Grad Norm 0.227400 0.87s/it
+Train TTS 1442 0.569567 Grad Norm 0.207229 1.03s/it
+Epoch: 39
+Train TTS 1443 0.578355 Grad Norm 0.226532 0.99s/it
+Train VC 1444 0.561992 Grad Norm 0.194834 1.15s/it
+Train TTS 1445 0.562905 Grad Norm 0.225339 1.07s/it
+Train VC 1446 0.571456 Grad Norm 0.197095 1.21s/it
+Train TTS 1447 0.560815 Grad Norm 0.173478 0.92s/it
+Train VC 1448 0.563231 Grad Norm 0.222311 0.95s/it
+Train TTS 1449 0.578481 Grad Norm 0.222381 1.16s/it
+Train VC 1450 0.572054 Grad Norm 0.226979 0.92s/it
+Train TTS 1451 0.577122 Grad Norm 0.233629 0.90s/it
+Train VC 1452 0.572330 Grad Norm 0.221443 0.86s/it
+Train TTS 1453 0.576186 Grad Norm 0.229601 0.87s/it
+Train VC 1454 0.568507 Grad Norm 0.218691 0.93s/it
+Train TTS 1455 0.578084 Grad Norm 0.203451 0.83s/it
+Train VC 1456 0.562441 Grad Norm 0.202082 0.87s/it
+Train TTS 1457 0.572489 Grad Norm 0.216798 0.97s/it
+Train VC 1458 0.561993 Grad Norm 0.171131 0.98s/it
+Train TTS 1459 0.581355 Grad Norm 0.181489 0.95s/it
+Train VC 1460 0.562446 Grad Norm 0.188558 0.97s/it
+Train TTS 1461 0.581530 Grad Norm 0.253444 1.08s/it
+Train VC 1462 0.560920 Grad Norm 0.170053 0.94s/it
+Train TTS 1463 0.576463 Grad Norm 0.190464 1.07s/it
+Train VC 1464 0.568306 Grad Norm 0.200109 0.93s/it
+Train TTS 1465 0.571564 Grad Norm 0.236249 0.90s/it
+Train VC 1466 0.557849 Grad Norm 0.194175 1.01s/it
+Train TTS 1467 0.586219 Grad Norm 0.225095 0.99s/it
+Train VC 1468 0.556379 Grad Norm 0.190675 0.91s/it
+Train TTS 1469 0.576053 Grad Norm 0.249950 1.12s/it
+Train VC 1470 0.557652 Grad Norm 0.221229 1.11s/it
+Train TTS 1471 0.577302 Grad Norm 0.225323 1.03s/it
+Train VC 1472 0.568722 Grad Norm 0.261912 0.90s/it
+Train TTS 1473 0.580909 Grad Norm 0.212061 1.03s/it
+Train VC 1474 0.563605 Grad Norm 0.238422 1.07s/it
+Train TTS 1475 0.585645 Grad Norm 0.266901 0.96s/it
+Train VC 1476 0.563989 Grad Norm 0.192078 0.96s/it
+Train TTS 1477 0.584965 Grad Norm 0.269599 1.11s/it
+Train VC 1478 0.557324 Grad Norm 0.204298 0.81s/it
+Train TTS 1479 0.577526 Grad Norm 0.256341 0.82s/it
+Epoch: 40
+Train TTS 1480 0.605251 Grad Norm 0.280520 1.02s/it
+Train VC 1481 0.565882 Grad Norm 0.180513 0.93s/it
+Train TTS 1482 0.571815 Grad Norm 0.234296 0.94s/it
+Train VC 1483 0.556203 Grad Norm 0.186515 0.96s/it
+Train TTS 1484 0.580980 Grad Norm 0.219430 0.90s/it
+Train VC 1485 0.558300 Grad Norm 0.196889 1.01s/it
+Train TTS 1486 0.575042 Grad Norm 0.224726 0.99s/it
+Train VC 1487 0.559162 Grad Norm 0.208369 0.93s/it
+Train TTS 1488 0.569265 Grad Norm 0.276138 0.90s/it
+Train VC 1489 0.556868 Grad Norm 0.189550 0.98s/it
+Train TTS 1490 0.572829 Grad Norm 0.207613 0.97s/it
+Train VC 1491 0.564271 Grad Norm 0.185821 0.98s/it
+Train TTS 1492 0.577837 Grad Norm 0.204492 0.94s/it
+Train VC 1493 0.557953 Grad Norm 0.160283 1.17s/it
+Train TTS 1494 0.567139 Grad Norm 0.197747 1.07s/it
+Train VC 1495 0.564701 Grad Norm 0.175392 1.06s/it
+Train TTS 1496 0.571731 Grad Norm 0.232574 0.99s/it
+Train VC 1497 0.552280 Grad Norm 0.167260 0.98s/it
+Train TTS 1498 0.580120 Grad Norm 0.206650 0.90s/it
+Train VC 1499 0.558669 Grad Norm 0.166241 0.92s/it
+Train TTS 1500 0.580346 Grad Norm 0.234896 0.93s/it
+Validation loss 1500: TTS  1.830244  VC  2.047337
+Saving model and optimizer state at iteration 1500 to outdir_emotion_IS/checkpoint_1500
+Train VC 1501 0.565124 Grad Norm 0.246956 1.02s/it
+Train TTS 1502 0.574242 Grad Norm 0.235144 0.93s/it
+Train VC 1503 0.575568 Grad Norm 0.200018 1.00s/it
+Train TTS 1504 0.575746 Grad Norm 0.208809 0.97s/it
+Train VC 1505 0.581078 Grad Norm 0.231389 1.05s/it
+Train TTS 1506 0.566096 Grad Norm 0.306667 1.17s/it
+Train VC 1507 0.566022 Grad Norm 0.222595 0.92s/it
+Train TTS 1508 0.690299 Grad Norm 0.631598 0.87s/it
+Train VC 1509 0.562274 Grad Norm 0.207594 1.08s/it
+Train TTS 1510 0.570192 Grad Norm 0.242010 1.14s/it
+Train VC 1511 0.563882 Grad Norm 0.208747 1.00s/it
+Train TTS 1512 0.589521 Grad Norm 0.230657 0.87s/it
+Train VC 1513 0.552037 Grad Norm 0.259284 1.09s/it
+Train TTS 1514 0.594416 Grad Norm 0.211055 1.10s/it
+Train VC 1515 0.572543 Grad Norm 0.200155 0.85s/it
+Train TTS 1516 0.589446 Grad Norm 0.236684 1.02s/it
+Epoch: 41
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1332: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1332: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1320: UserWarning: nn.functional.tanh is deprecated. Use torch.tanh instead.
+  warnings.warn("nn.functional.tanh is deprecated. Use torch.tanh instead.")
+/home/zhoukun/nonparaSeq2seqVC_code-master/pre-train_IS/model/loss.py:111: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  padded = torch.tensor(text_target.data.new(B,1).zero_())
+Train TTS 1517 0.592995 Grad Norm 0.238201 1.05s/it
+Train VC 1518 0.557835 Grad Norm 0.221858 1.12s/it
+Train TTS 1519 0.587673 Grad Norm 0.278733 0.92s/it
+Train VC 1520 0.562518 Grad Norm 0.207877 1.07s/it
+Train TTS 1521 0.577000 Grad Norm 0.212897 0.92s/it
+Train VC 1522 0.557689 Grad Norm 0.207421 0.94s/it
+Train TTS 1523 0.609552 Grad Norm 0.308693 0.84s/it
+Train VC 1524 0.571925 Grad Norm 0.214999 1.07s/it
+Train TTS 1525 0.615910 Grad Norm 0.291890 1.05s/it
+Train VC 1526 0.560004 Grad Norm 0.186682 1.12s/it
+Train TTS 1527 0.570119 Grad Norm 0.215352 1.05s/it
+Train VC 1528 0.564674 Grad Norm 0.212821 0.99s/it
+Train TTS 1529 0.574127 Grad Norm 0.233639 1.07s/it
+Train VC 1530 0.562028 Grad Norm 0.207927 0.92s/it
+Train TTS 1531 0.579819 Grad Norm 0.202385 1.07s/it
+Train VC 1532 0.596042 Grad Norm 0.353079 0.90s/it
+Train TTS 1533 0.581249 Grad Norm 0.280460 1.06s/it
+Train VC 1534 0.574485 Grad Norm 0.244194 0.89s/it
+Train TTS 1535 0.575719 Grad Norm 0.223189 0.98s/it
+Train VC 1536 0.564251 Grad Norm 0.262324 1.17s/it
+Train TTS 1537 0.576358 Grad Norm 0.223997 0.95s/it
+Train VC 1538 0.567644 Grad Norm 0.182723 0.89s/it
+Train TTS 1539 0.580831 Grad Norm 0.243789 1.04s/it
+Train VC 1540 0.573682 Grad Norm 0.238625 0.87s/it
+Train TTS 1541 0.574775 Grad Norm 0.210077 1.08s/it
+Train VC 1542 0.558433 Grad Norm 0.230691 1.01s/it
+Train TTS 1543 0.580569 Grad Norm 0.313585 1.12s/it
+Train VC 1544 0.553409 Grad Norm 0.208880 0.90s/it
+Train TTS 1545 0.573116 Grad Norm 0.245988 0.95s/it
+Train VC 1546 0.570482 Grad Norm 0.183590 0.91s/it
+Train TTS 1547 0.613339 Grad Norm 0.368744 0.84s/it
+Train VC 1548 0.559058 Grad Norm 0.207979 1.08s/it
+Train TTS 1549 0.579233 Grad Norm 0.247149 0.97s/it
+Train VC 1550 0.562264 Grad Norm 0.198027 1.16s/it
+Train TTS 1551 0.584721 Grad Norm 0.242016 0.89s/it
+Train VC 1552 0.555363 Grad Norm 0.178307 0.79s/it
+Train TTS 1553 0.578495 Grad Norm 0.294998 0.93s/it
+Epoch: 42
+Train TTS 1554 0.575091 Grad Norm 0.240465 1.02s/it
+Train VC 1555 0.548009 Grad Norm 0.185896 1.12s/it
+Train TTS 1556 0.575495 Grad Norm 0.237207 1.08s/it
+Train VC 1557 0.555661 Grad Norm 0.200554 1.07s/it
+Train TTS 1558 0.573147 Grad Norm 0.220011 0.99s/it
+Train VC 1559 0.563617 Grad Norm 0.200565 0.87s/it
+Train TTS 1560 0.586242 Grad Norm 0.208002 0.82s/it
+Train VC 1561 0.569134 Grad Norm 0.201298 1.05s/it
+Train TTS 1562 0.571781 Grad Norm 0.248771 0.95s/it
+Train VC 1563 0.569797 Grad Norm 0.214755 0.93s/it
+Train TTS 1564 0.579879 Grad Norm 0.201870 0.96s/it
+Train VC 1565 0.557284 Grad Norm 0.192150 0.98s/it
+Train TTS 1566 0.573172 Grad Norm 0.191682 0.97s/it
+Train VC 1567 0.559382 Grad Norm 0.174090 1.05s/it
+Train TTS 1568 0.576212 Grad Norm 0.238710 0.98s/it
+Train VC 1569 0.571747 Grad Norm 0.226939 1.00s/it
+Train TTS 1570 0.571546 Grad Norm 0.272459 0.92s/it
+Train VC 1571 0.552863 Grad Norm 0.169594 1.07s/it
+Train TTS 1572 0.568258 Grad Norm 0.196181 1.05s/it
+Train VC 1573 0.559502 Grad Norm 0.191877 0.86s/it
+Train TTS 1574 0.571851 Grad Norm 0.209438 1.05s/it
+Train VC 1575 0.562380 Grad Norm 0.171576 1.12s/it
+Train TTS 1576 0.571854 Grad Norm 0.205613 0.95s/it
+Train VC 1577 0.558012 Grad Norm 0.175944 0.98s/it
+Train TTS 1578 0.567411 Grad Norm 0.201437 1.01s/it
+Train VC 1579 0.562063 Grad Norm 0.226931 0.88s/it
+Train TTS 1580 0.568239 Grad Norm 0.227665 0.88s/it
+Train VC 1581 0.555599 Grad Norm 0.157575 0.90s/it
+Train TTS 1582 0.585371 Grad Norm 0.212297 0.99s/it
+Train VC 1583 0.568325 Grad Norm 0.205452 0.86s/it
+Train TTS 1584 0.569636 Grad Norm 0.209327 0.95s/it
+Train VC 1585 0.569795 Grad Norm 0.197369 0.87s/it
+Train TTS 1586 0.581635 Grad Norm 0.223959 1.12s/it
+Train VC 1587 0.551481 Grad Norm 0.152890 1.19s/it
+Train TTS 1588 0.571843 Grad Norm 0.233382 0.90s/it
+Train VC 1589 0.563465 Grad Norm 0.213410 0.98s/it
+Train TTS 1590 0.563235 Grad Norm 0.180341 0.92s/it
+Epoch: 43
+Train TTS 1591 0.568901 Grad Norm 0.197005 1.06s/it
+Train VC 1592 0.558503 Grad Norm 0.198590 0.97s/it
+Train TTS 1593 0.573915 Grad Norm 0.233692 0.93s/it
+Train VC 1594 0.548176 Grad Norm 0.165310 0.93s/it
+Train TTS 1595 0.574760 Grad Norm 0.226482 0.93s/it
+Train VC 1596 0.550399 Grad Norm 0.235068 1.08s/it
+Train TTS 1597 0.580713 Grad Norm 0.213005 0.97s/it
+Train VC 1598 0.554719 Grad Norm 0.177407 1.06s/it
+Train TTS 1599 0.569255 Grad Norm 0.205216 1.01s/it
+Train VC 1600 0.570575 Grad Norm 0.195398 1.04s/it
+Validation loss 1600: TTS  1.831872  VC  2.035378
+Saving model and optimizer state at iteration 1600 to outdir_emotion_IS/checkpoint_1600
+Train TTS 1601 0.577477 Grad Norm 0.192188 0.96s/it
+Train VC 1602 0.568935 Grad Norm 0.169758 1.03s/it
+Train TTS 1603 0.571270 Grad Norm 0.244051 0.93s/it
+Train VC 1604 0.573109 Grad Norm 0.219253 1.05s/it
+Train TTS 1605 0.585171 Grad Norm 0.197979 1.13s/it
+Train VC 1606 0.560776 Grad Norm 0.152770 1.17s/it
+Train TTS 1607 0.572675 Grad Norm 0.181220 1.06s/it
+Train VC 1608 0.556895 Grad Norm 0.170553 0.96s/it
+Train TTS 1609 0.570902 Grad Norm 0.211354 1.14s/it
+Train VC 1610 0.559753 Grad Norm 0.167814 1.12s/it
+Train TTS 1611 0.563498 Grad Norm 0.219377 0.84s/it
+Train VC 1612 0.554409 Grad Norm 0.189316 0.99s/it
+Train TTS 1613 0.570816 Grad Norm 0.201553 1.16s/it
+Train VC 1614 0.561346 Grad Norm 0.166273 0.94s/it
+Train TTS 1615 0.565032 Grad Norm 0.231103 0.93s/it
+Train VC 1616 0.562497 Grad Norm 0.167516 0.80s/it
+Train TTS 1617 0.574052 Grad Norm 0.197430 0.90s/it
+Train VC 1618 0.558979 Grad Norm 0.175403 1.12s/it
+Train TTS 1619 0.574818 Grad Norm 0.230770 0.86s/it
+Train VC 1620 0.559553 Grad Norm 0.201473 0.93s/it
+Train TTS 1621 0.586333 Grad Norm 0.244738 0.94s/it
+Train VC 1622 0.552219 Grad Norm 0.166385 1.01s/it
+Train TTS 1623 0.569637 Grad Norm 0.206704 1.00s/it
+Train VC 1624 0.565685 Grad Norm 0.176886 1.21s/it
+Train TTS 1625 0.580312 Grad Norm 0.199289 1.11s/it
+Train VC 1626 0.572888 Grad Norm 0.247202 0.83s/it
+Train TTS 1627 0.573763 Grad Norm 0.184018 0.91s/it
+Epoch: 44
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1332: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1332: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1320: UserWarning: nn.functional.tanh is deprecated. Use torch.tanh instead.
+  warnings.warn("nn.functional.tanh is deprecated. Use torch.tanh instead.")
+/home/zhoukun/nonparaSeq2seqVC_code-master/pre-train_IS/model/loss.py:111: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  padded = torch.tensor(text_target.data.new(B,1).zero_())
+Train TTS 1628 0.578008 Grad Norm 0.215272 1.07s/it
+Train VC 1629 0.558133 Grad Norm 0.169391 0.87s/it
+Train TTS 1630 0.572069 Grad Norm 0.262160 1.04s/it
+Train VC 1631 0.558294 Grad Norm 0.203286 0.94s/it
+Train TTS 1632 0.572451 Grad Norm 0.210008 0.91s/it
+Train VC 1633 0.560748 Grad Norm 0.200539 0.99s/it
+Train TTS 1634 0.565874 Grad Norm 0.193860 0.89s/it
+Train VC 1635 0.560512 Grad Norm 0.223893 1.03s/it
+Train TTS 1636 0.580238 Grad Norm 0.237081 1.10s/it
+Train VC 1637 0.569168 Grad Norm 0.472603 0.89s/it
+Train TTS 1638 0.570868 Grad Norm 0.216620 0.95s/it
+Train VC 1639 0.564225 Grad Norm 0.172185 0.91s/it
+Train TTS 1640 0.568210 Grad Norm 0.210344 0.95s/it
+Train VC 1641 0.561631 Grad Norm 0.196735 1.16s/it
+Train TTS 1642 0.579564 Grad Norm 0.216629 0.88s/it
+Train VC 1643 0.552501 Grad Norm 0.188126 1.05s/it
+Train TTS 1644 0.575489 Grad Norm 0.202642 0.91s/it
+Train VC 1645 0.552905 Grad Norm 0.225723 0.87s/it
+Train TTS 1646 0.564510 Grad Norm 0.218558 0.95s/it
+Train VC 1647 0.563242 Grad Norm 0.179119 1.11s/it
+Train TTS 1648 0.592352 Grad Norm 0.234097 0.91s/it
+Train VC 1649 0.560711 Grad Norm 0.211769 0.90s/it
+Train TTS 1650 0.579629 Grad Norm 0.247447 0.93s/it
+Train VC 1651 0.570712 Grad Norm 0.194344 0.94s/it
+Train TTS 1652 0.571574 Grad Norm 0.165455 1.02s/it
+Train VC 1653 0.549525 Grad Norm 0.164445 1.10s/it
+Train TTS 1654 0.570733 Grad Norm 0.233840 1.06s/it
+Train VC 1655 0.562314 Grad Norm 0.216367 1.08s/it
+Train TTS 1656 0.578624 Grad Norm 0.198654 1.12s/it
+Train VC 1657 0.570075 Grad Norm 0.204654 1.06s/it
+Train TTS 1658 0.571537 Grad Norm 0.219172 1.17s/it
+Train VC 1659 0.559007 Grad Norm 0.176460 1.00s/it
+Train TTS 1660 0.580027 Grad Norm 0.237391 0.88s/it
+Train VC 1661 0.556992 Grad Norm 0.161237 1.03s/it
+Train TTS 1662 0.562491 Grad Norm 0.219665 1.05s/it
+Train VC 1663 0.555780 Grad Norm 0.180559 1.05s/it
+Train TTS 1664 0.575273 Grad Norm 0.179604 0.86s/it
+Epoch: 45
+Train TTS 1665 0.573094 Grad Norm 0.209248 1.20s/it
+Train VC 1666 0.561338 Grad Norm 0.204472 1.11s/it
+Train TTS 1667 0.587870 Grad Norm 0.227060 0.95s/it
+Train VC 1668 0.559538 Grad Norm 0.220102 0.97s/it
+Train TTS 1669 0.567678 Grad Norm 0.247425 0.94s/it
+Train VC 1670 0.556689 Grad Norm 0.175122 0.92s/it
+Train TTS 1671 0.568136 Grad Norm 0.194137 0.96s/it
+Train VC 1672 0.556865 Grad Norm 0.166904 0.91s/it
+Train TTS 1673 0.566248 Grad Norm 0.214666 1.02s/it
+Train VC 1674 0.563003 Grad Norm 0.255180 0.88s/it
+Train TTS 1675 0.577195 Grad Norm 0.207951 1.08s/it
+Train VC 1676 0.564343 Grad Norm 0.185106 1.13s/it
+Train TTS 1677 0.569574 Grad Norm 0.197876 0.88s/it
+Train VC 1678 0.564328 Grad Norm 0.188441 1.10s/it
+Train TTS 1679 0.564919 Grad Norm 0.191576 1.04s/it
+Train VC 1680 0.562329 Grad Norm 0.202914 1.08s/it
+Train TTS 1681 0.571544 Grad Norm 0.173979 0.95s/it
+Train VC 1682 0.563190 Grad Norm 0.170171 1.08s/it
+Train TTS 1683 0.564350 Grad Norm 0.217903 0.89s/it
+Train VC 1684 0.557539 Grad Norm 0.203009 0.94s/it
+Train TTS 1685 0.582993 Grad Norm 0.203954 1.00s/it
+Train VC 1686 0.560689 Grad Norm 0.205743 0.87s/it
+Train TTS 1687 0.578706 Grad Norm 0.204827 0.95s/it
+Train VC 1688 0.561501 Grad Norm 0.170608 1.04s/it
+Train TTS 1689 0.554555 Grad Norm 0.177999 1.01s/it
+Train VC 1690 0.558068 Grad Norm 0.187528 0.98s/it
+Train TTS 1691 0.575318 Grad Norm 0.209549 0.91s/it
+Train VC 1692 0.556799 Grad Norm 0.193498 0.99s/it
+Train TTS 1693 0.574968 Grad Norm 0.217307 0.89s/it
+Train VC 1694 0.556718 Grad Norm 0.181324 0.85s/it
+Train TTS 1695 0.573997 Grad Norm 0.247273 1.01s/it
+Train VC 1696 0.565463 Grad Norm 0.181840 0.87s/it
+Train TTS 1697 0.582803 Grad Norm 0.213257 1.12s/it
+Train VC 1698 0.561403 Grad Norm 0.171490 1.01s/it
+Train TTS 1699 0.564733 Grad Norm 0.238572 0.91s/it
+Train VC 1700 0.563244 Grad Norm 0.168970 1.10s/it
+Validation loss 1700: TTS  1.834658  VC  2.041386
+Saving model and optimizer state at iteration 1700 to outdir_emotion_IS/checkpoint_1700
+Train TTS 1701 0.580888 Grad Norm 0.225483 0.93s/it
+Epoch: 46
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1332: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1332: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1320: UserWarning: nn.functional.tanh is deprecated. Use torch.tanh instead.
+  warnings.warn("nn.functional.tanh is deprecated. Use torch.tanh instead.")
+/home/zhoukun/nonparaSeq2seqVC_code-master/pre-train_IS/model/loss.py:111: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  padded = torch.tensor(text_target.data.new(B,1).zero_())
+Train TTS 1702 0.568088 Grad Norm 0.210247 1.07s/it
+Train VC 1703 0.557526 Grad Norm 0.163462 0.96s/it
+Train TTS 1704 0.575210 Grad Norm 0.211446 1.11s/it
+Train VC 1705 0.626521 Grad Norm 0.456970 0.87s/it
+Train TTS 1706 0.566967 Grad Norm 0.208502 0.97s/it
+Train VC 1707 0.564831 Grad Norm 0.226891 0.92s/it
+Train TTS 1708 0.573943 Grad Norm 0.255033 1.18s/it
+Train VC 1709 0.562683 Grad Norm 0.160823 1.01s/it
+Train TTS 1710 0.571681 Grad Norm 0.189153 1.05s/it
+Train VC 1711 0.553097 Grad Norm 0.293520 0.95s/it
+Train TTS 1712 0.564048 Grad Norm 0.236958 0.99s/it
+Train VC 1713 0.566344 Grad Norm 0.190393 1.07s/it
+Train TTS 1714 0.573661 Grad Norm 0.301768 1.00s/it
+Train VC 1715 0.564536 Grad Norm 0.170816 1.11s/it
+Train TTS 1716 0.579544 Grad Norm 0.224667 0.88s/it
+Train VC 1717 0.553002 Grad Norm 0.196407 0.92s/it
+Train TTS 1718 0.570891 Grad Norm 0.192981 0.92s/it
+Train VC 1719 0.577985 Grad Norm 0.268568 0.91s/it
+Train TTS 1720 0.586239 Grad Norm 0.216595 0.88s/it
+Train VC 1721 0.554896 Grad Norm 0.190018 0.84s/it
+Train TTS 1722 0.563529 Grad Norm 0.190464 0.95s/it
+Train VC 1723 0.563283 Grad Norm 0.202354 1.08s/it
+Train TTS 1724 0.580137 Grad Norm 0.209489 1.16s/it
+Train VC 1725 0.579540 Grad Norm 0.244426 0.84s/it
+Train TTS 1726 0.573793 Grad Norm 0.264154 0.94s/it
+Train VC 1727 0.560387 Grad Norm 0.201585 1.14s/it
+Train TTS 1728 0.571175 Grad Norm 0.205612 1.07s/it
+Train VC 1729 0.562198 Grad Norm 0.172567 1.00s/it
+Train TTS 1730 0.577310 Grad Norm 0.196242 1.08s/it
+Train VC 1731 0.570470 Grad Norm 0.203005 0.99s/it
+Train TTS 1732 0.589372 Grad Norm 0.273500 0.95s/it
+Train VC 1733 0.578027 Grad Norm 0.211427 0.82s/it
+Train TTS 1734 0.572450 Grad Norm 0.237755 0.85s/it
+Train VC 1735 0.561505 Grad Norm 0.166914 0.90s/it
+Train TTS 1736 0.590289 Grad Norm 0.262301 0.93s/it
+Train VC 1737 0.562303 Grad Norm 0.165702 1.02s/it
+Train TTS 1738 0.575445 Grad Norm 0.226216 0.96s/it
+Epoch: 47
+Train TTS 1739 0.572683 Grad Norm 0.329825 0.98s/it
+Train VC 1740 0.562591 Grad Norm 0.197836 0.94s/it
+Train TTS 1741 0.581371 Grad Norm 0.200453 0.87s/it
+Train VC 1742 0.558351 Grad Norm 0.175113 0.91s/it
+Train TTS 1743 0.569352 Grad Norm 0.286377 0.97s/it
+Train VC 1744 0.560882 Grad Norm 0.247895 1.06s/it
+Train TTS 1745 0.571819 Grad Norm 0.225197 0.89s/it
+Train VC 1746 0.570137 Grad Norm 0.216011 0.88s/it
+Train TTS 1747 0.565703 Grad Norm 0.189879 0.92s/it
+Train VC 1748 0.563877 Grad Norm 0.226604 1.07s/it
+Train TTS 1749 0.577669 Grad Norm 0.205187 0.90s/it
+Train VC 1750 0.558958 Grad Norm 0.215100 1.02s/it
+Train TTS 1751 0.571280 Grad Norm 0.210522 1.01s/it
+Train VC 1752 0.559225 Grad Norm 0.224915 1.12s/it
+Train TTS 1753 0.579790 Grad Norm 0.220713 0.93s/it
+Train VC 1754 0.555308 Grad Norm 0.186350 1.11s/it
+Train TTS 1755 0.566819 Grad Norm 0.215913 1.20s/it
+Train VC 1756 0.562006 Grad Norm 0.250143 0.92s/it
+Train TTS 1757 0.567742 Grad Norm 0.218066 1.16s/it
+Train VC 1758 0.554302 Grad Norm 0.192060 1.05s/it
+Train TTS 1759 0.571180 Grad Norm 0.256457 0.81s/it
+Train VC 1760 0.558403 Grad Norm 0.230349 0.86s/it
+Train TTS 1761 0.579216 Grad Norm 0.241113 0.93s/it
+Train VC 1762 0.563342 Grad Norm 0.202729 1.12s/it
+Train TTS 1763 0.573966 Grad Norm 0.178032 0.92s/it
+Train VC 1764 0.565075 Grad Norm 0.181982 0.92s/it
+Train TTS 1765 0.641953 Grad Norm 0.401238 0.85s/it
+Train VC 1766 0.554362 Grad Norm 0.211809 0.98s/it
+Train TTS 1767 0.564420 Grad Norm 0.225169 1.09s/it
+Train VC 1768 0.566340 Grad Norm 0.219266 0.98s/it
+Train TTS 1769 0.574458 Grad Norm 0.193882 1.09s/it
+Train VC 1770 0.563928 Grad Norm 0.200142 1.07s/it
+Train TTS 1771 0.616844 Grad Norm 0.275746 0.92s/it
+Train VC 1772 0.576581 Grad Norm 0.229165 0.95s/it
+Train TTS 1773 0.567368 Grad Norm 0.192819 1.05s/it
+Train VC 1774 0.562730 Grad Norm 0.168125 0.91s/it
+Train TTS 1775 0.574955 Grad Norm 0.187975 0.98s/it
+Epoch: 48
+Train TTS 1776 0.580134 Grad Norm 0.247178 1.07s/it
+Train VC 1777 0.585108 Grad Norm 0.239616 0.90s/it
+Train TTS 1778 0.571461 Grad Norm 0.216029 1.16s/it
+Train VC 1779 0.561088 Grad Norm 0.192997 0.99s/it
+Train TTS 1780 0.562935 Grad Norm 0.200414 1.13s/it
+Train VC 1781 0.559444 Grad Norm 0.184517 1.05s/it
+Train TTS 1782 0.574418 Grad Norm 0.195348 1.21s/it
+Train VC 1783 0.565224 Grad Norm 0.184638 1.07s/it
+Train TTS 1784 0.579094 Grad Norm 0.231005 0.96s/it
+Train VC 1785 0.560803 Grad Norm 0.166871 0.98s/it
+Train TTS 1786 0.567737 Grad Norm 0.208035 1.08s/it
+Train VC 1787 0.552494 Grad Norm 0.203744 0.90s/it
+Train TTS 1788 0.576936 Grad Norm 0.205288 1.03s/it
+Train VC 1789 0.550912 Grad Norm 0.158887 1.08s/it
+Train TTS 1790 0.576823 Grad Norm 0.229346 1.09s/it
+Train VC 1791 0.565308 Grad Norm 0.222130 0.91s/it
+Train TTS 1792 0.594560 Grad Norm 0.245953 0.87s/it
+Train VC 1793 0.570653 Grad Norm 0.211823 0.97s/it
+Train TTS 1794 0.580954 Grad Norm 0.221889 0.87s/it
+Train VC 1795 0.564339 Grad Norm 0.179972 0.93s/it
+Train TTS 1796 0.573352 Grad Norm 0.217763 1.00s/it
+Train VC 1797 0.612909 Grad Norm 0.304494 0.89s/it
+Train TTS 1798 0.569697 Grad Norm 0.231894 0.95s/it
+Train VC 1799 0.563638 Grad Norm 0.230237 1.10s/it
+Train TTS 1800 0.561650 Grad Norm 0.175922 1.04s/it
+Validation loss 1800: TTS  1.832961  VC  2.044206
+Saving model and optimizer state at iteration 1800 to outdir_emotion_IS/checkpoint_1800
+Train VC 1801 0.558979 Grad Norm 0.182878 1.16s/it
+Train TTS 1802 0.573976 Grad Norm 0.213319 1.00s/it
+Train VC 1803 0.558339 Grad Norm 0.167810 1.09s/it
+Train TTS 1804 0.567134 Grad Norm 0.183598 1.11s/it
+Train VC 1805 0.548942 Grad Norm 0.185439 0.99s/it
+Train TTS 1806 0.571767 Grad Norm 0.207451 1.18s/it
+Train VC 1807 0.561951 Grad Norm 0.185305 1.09s/it
+Train TTS 1808 0.571918 Grad Norm 0.266777 0.98s/it
+Train VC 1809 0.545735 Grad Norm 0.174948 0.86s/it
+Train TTS 1810 0.572691 Grad Norm 0.209345 0.96s/it
+Train VC 1811 0.565946 Grad Norm 0.178129 0.94s/it
+Train TTS 1812 0.572739 Grad Norm 0.198129 0.84s/it
+Epoch: 49
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1332: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1332: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+/home/zhoukun/miniconda3/envs/s2s/lib/python3.6/site-packages/torch/nn/functional.py:1320: UserWarning: nn.functional.tanh is deprecated. Use torch.tanh instead.
+  warnings.warn("nn.functional.tanh is deprecated. Use torch.tanh instead.")
+/home/zhoukun/nonparaSeq2seqVC_code-master/pre-train_IS/model/loss.py:111: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  padded = torch.tensor(text_target.data.new(B,1).zero_())
+Train TTS 1813 0.567483 Grad Norm 0.226528 1.26s/it
+Train VC 1814 0.555164 Grad Norm 0.252463 0.93s/it
+Train TTS 1815 0.578100 Grad Norm 0.174170 1.11s/it
+Train VC 1816 0.562255 Grad Norm 0.174236 0.89s/it
+Train TTS 1817 0.567716 Grad Norm 0.200324 0.88s/it
+Train VC 1818 0.568697 Grad Norm 0.202088 0.93s/it
+Train TTS 1819 0.573660 Grad Norm 0.209402 0.87s/it
+Train VC 1820 0.548601 Grad Norm 0.162078 0.97s/it
+Train TTS 1821 0.581168 Grad Norm 0.211757 0.84s/it
+Train VC 1822 0.567935 Grad Norm 0.177489 0.90s/it
+Train TTS 1823 0.565417 Grad Norm 0.197031 1.07s/it
+Train VC 1824 0.555998 Grad Norm 0.168438 1.12s/it
+Train TTS 1825 0.568276 Grad Norm 0.165471 1.07s/it
+Train VC 1826 0.567278 Grad Norm 0.222518 0.82s/it
+Train TTS 1827 0.578846 Grad Norm 0.184346 1.10s/it
+Train VC 1828 0.563779 Grad Norm 0.197849 0.87s/it
+Train TTS 1829 0.578439 Grad Norm 0.186794 1.04s/it
+Train VC 1830 0.553748 Grad Norm 0.184499 0.91s/it
+Train TTS 1831 0.577903 Grad Norm 0.203599 0.94s/it
+Train VC 1832 0.552660 Grad Norm 0.156906 1.01s/it
+Train TTS 1833 0.577152 Grad Norm 0.192664 1.19s/it
+Train VC 1834 0.549529 Grad Norm 0.203052 0.95s/it
+Train TTS 1835 0.576563 Grad Norm 0.239852 1.08s/it
+Train VC 1836 0.558920 Grad Norm 0.187820 0.96s/it
+Train TTS 1837 0.566068 Grad Norm 0.198171 0.91s/it
+Train VC 1838 0.556285 Grad Norm 0.203642 0.91s/it
+Train TTS 1839 0.594204 Grad Norm 0.376169 0.89s/it
+Train VC 1840 0.570783 Grad Norm 0.174579 0.96s/it
+Train TTS 1841 0.569912 Grad Norm 0.205560 1.00s/it
+Train VC 1842 0.558282 Grad Norm 0.201225 0.93s/it
+Train TTS 1843 0.571990 Grad Norm 0.198046 0.92s/it
+Train VC 1844 0.552229 Grad Norm 0.182809 1.09s/it
+Train TTS 1845 0.566710 Grad Norm 0.186306 1.09s/it
+Train VC 1846 0.546725 Grad Norm 0.176190 1.08s/it
+Train TTS 1847 0.564988 Grad Norm 0.173597 1.05s/it
+Train VC 1848 0.557073 Grad Norm 0.164360 0.90s/it
+Train TTS 1849 0.559161 Grad Norm 0.216738 1.04s/it
