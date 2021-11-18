@@ -60,9 +60,9 @@ Please remember to customize the paths in hparam.py...
 $ cd conversion
 $ python inference_embedding.py -c '/home/zhoukun/nonparaSeq2seqVC_code-master/fine-tune/outdir_emotion_update/checkpoint_3200 [YOUR EMOTION TRAINING CHECKPOINT]' --hparams speaker_A='Neutral',speaker_B='Happy',speaker_C='Sad',speaker_D='Angry',training_list='/home/zhoukun/nonparaSeq2seqVC_code-master/fine-tune/reader/emotion_list/testing_mel_list.txt',SC_kernel_size=1
 ```
-(2) Convert the source speech to the target emotion:
+(2) Convert the source speech to the target emotion: [FOR EXAMPLE: convert emotion D to emotion A]
 ```Bash
 $ cd conversion
-$ python inference.py -c '/home/zhoukun/nonparaSeq2seqVC_code-master/pre-train/outdir_emotion_update/checkpoint_3200[YOUR EMOTION TRAINING CHECKPOINT]' --num 20 --hparams validation_list='/home/zhoukun/nonparaSeq2seqVC_code-master/fine-tune/reader/emotion_list/evaluation_mel_list.txt',SC_kernel_size=1
+$ python inference_A.py -c '/home/zhoukun/nonparaSeq2seqVC_code-master/pre-train/outdir_emotion_update/checkpoint_3200[YOUR EMOTION TRAINING CHECKPOINT]' --num 20 --hparams validation_list='/home/zhoukun/nonparaSeq2seqVC_code-master/fine-tune/reader/emotion_list/evaluation_mel_list.txt',SC_kernel_size=1
 ```
 Please customize inference.py to generate your intended emotion type.
