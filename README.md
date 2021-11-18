@@ -54,11 +54,15 @@ $ python train.py -l logdir \
 **6. Run-time Inference**
 
 (1) Generate emotion embedding from the emotion encoder:
+
+Please remember to customize the paths in hparam.py...
 ```Bash
-$ python inference_embedding.py -c '/home/zhoukun/nonparaSeq2seqVC_code-master/pre-train/outdir_emotion_update/checkpoint_3200' --hparams speaker_A='Neutral',speaker_B='Happy',speaker_C='Sad',speaker_D='Angry',speaker_E='Surprise',training_list='/home/zhoukun/nonparaSeq2seqVC_code-master/fine-tune/reader/emotion_list/testing_mel_list.txt',SC_kernel_size=1
+$ cd conversion
+$ python inference_embedding.py -c '/home/zhoukun/nonparaSeq2seqVC_code-master/fine-tune/outdir_emotion_update/checkpoint_3200 [YOUR EMOTION TRAINING CHECKPOINT]' --hparams speaker_A='Neutral',speaker_B='Happy',speaker_C='Sad',speaker_D='Angry',training_list='/home/zhoukun/nonparaSeq2seqVC_code-master/fine-tune/reader/emotion_list/testing_mel_list.txt',SC_kernel_size=1
 ```
 (2) Convert the source speech to the target emotion:
 ```Bash
-$ python inference.py -c /home/zhoukun/nonparaSeq2seqVC_code-master/pre-train/outdir_emotion_update/checkpoint_3200 --num 20 --hparams validation_list='/home/zhoukun/nonparaSeq2seqVC_code-master/fine-tune/reader/emotion_list/evaluation_mel_list.txt',SC_kernel_size=1
+$ cd conversion
+$ python inference.py -c '/home/zhoukun/nonparaSeq2seqVC_code-master/pre-train/outdir_emotion_update/checkpoint_3200[YOUR EMOTION TRAINING CHECKPOINT]' --num 20 --hparams validation_list='/home/zhoukun/nonparaSeq2seqVC_code-master/fine-tune/reader/emotion_list/evaluation_mel_list.txt',SC_kernel_size=1
 ```
 Please customize inference.py to generate your intended emotion type.
