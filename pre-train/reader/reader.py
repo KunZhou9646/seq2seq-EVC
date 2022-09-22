@@ -48,12 +48,12 @@ class TextMelIDLoader(torch.utils.data.Dataset):
                 #path = path.replace('data07','home')
                 #path = path.replace('CMU_ARCTIC','non')
 
-                if not speaker_id in pids:
+                #if not speaker_id in pids:
         
-                    continue
-
-                #if int(n_frame) >= 800:
                 #    continue
+
+                if int(n_frame) >= 800:
+                    continue
                 
                 file_path_list.append(path)
 
