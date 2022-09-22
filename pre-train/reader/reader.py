@@ -42,7 +42,7 @@ class TextMelIDLoader(torch.utils.data.Dataset):
         with open(list_file) as f:
             lines = f.readlines()
             for line in lines:
-                path, n_frame = line.strip().split()
+                path, n_frame, _ = line.strip().split()
                 #speaker_id = path.split('/')[-3].split('_')[2]
                 speaker_id = path.split('/')[-2]
                 #path = path.replace('data07','home')
